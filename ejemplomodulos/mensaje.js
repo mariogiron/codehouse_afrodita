@@ -1,0 +1,1 @@
+module.exports = 'Este es mi mensaje';

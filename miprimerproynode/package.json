@@ -1,0 +1,15 @@
+{
+  "name": "miprimerproynode",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto chachi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mario Girón",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1"
+  }
+}
