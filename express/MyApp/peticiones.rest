@@ -1,0 +1,10 @@
+POST http://localhost:3000/products/edit
+
+###
+PUT http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/38
+
+###
+GET http://localhost:3000/users/23/products/791

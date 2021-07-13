@@ -1,0 +1,10 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/otra
+
+###
+POST http://localhost:3000/create
+
+###
+GET http://localhost:3000/productos
