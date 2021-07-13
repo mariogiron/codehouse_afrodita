@@ -24,4 +24,3 @@ fsPromises.readFile('./ficheros/primero.md', 'utf-8')
     const data = await fsPromises.readFile('./ficheros/primero.md', 'utf-8');
     console.log(data);
 })();
-
