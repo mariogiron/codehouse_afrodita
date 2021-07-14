@@ -14,5 +14,6 @@ connection.connect((err) => {
             return console.log(err.message);
         }
         console.log(result);
-    })
+    });
+    connection.end();
 });
