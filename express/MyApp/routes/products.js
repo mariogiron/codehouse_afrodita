@@ -1,5 +1,11 @@
 const router = require('express').Router();
 
+router.get('/list', (req, res) => {
+    console.log(req.query);
+    console.log('LIST', req.unixTime);
+    res.end('FUNCIONA LIST');
+});
+
 router.get('/:productId', (req, res) => {
     console.log(req.params);
     res.end('Recuperamos el producto con ID: ' + req.params.productId);

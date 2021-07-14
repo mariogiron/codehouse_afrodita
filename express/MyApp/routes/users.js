@@ -8,12 +8,22 @@ router.get('/', function (req, res, next) {
 
 // GET http://localhost:3000/users/new
 router.get('/new', (req, res) => {
-  res.send('Creamos un nuevo usuario');
+  res.send('Creamos un nuevo usuario!');
 });
 
 router.get('/:userId/products/:productId', (req, res) => {
   console.log(req.params);
   res.end(`Recuperamos usuario: ${req.params.userId} y producto: ${req.params.productId}`);
 });
+
+
+
+router.post('/create', (req, res) => {
+  console.log(req.body);
+  res.json(req.body);
+});
+
+
+
 
 module.exports = router;

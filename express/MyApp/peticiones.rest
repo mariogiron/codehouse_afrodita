@@ -8,3 +8,19 @@ GET http://localhost:3000/products/38
 
 ###
 GET http://localhost:3000/users/23/products/791
+
+###
+GET http://localhost:3000/users/13/products/3434
+
+###
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "name": "Mario",
+    "surname": "Girón",
+    "age": 24
+}
+
+###
+GET http://localhost:3000/products/list?page=3&limit=10&cat=sports
