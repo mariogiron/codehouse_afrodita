@@ -1,10 +1,35 @@
 GET http://localhost:3000/api/products
 
 ###
-POST http://localhost:3000/api/products
+GET http://localhost:3000/api/products/v2
 
 ###
-PUT http://localhost:3000/api/products
+GET http://localhost:3000/api/products/5
 
 ###
-DELETE http://localhost:3000/api/products
+POST http://localhost:3000/api/products/v2
+Content-Type: application/json
+
+{
+    "name": "Pantalón de pana",
+    "description": "Mu fresquito",
+    "price": 60,
+    "category": "moda"
+}
+
+###
+PUT http://localhost:3000/api/products/5
+Content-Type: application/json
+
+{
+    "name": "Pantalón de pana",
+    "description": "Mu fresquito para el veranito",
+    "price": 170,
+    "category": "moda"
+}
+
+###
+DELETE http://localhost:3000/api/products/3
+
+###
+GET http://localhost:3000/api/products/cat/moda
