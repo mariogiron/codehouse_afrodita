@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 const { getAll, getById, create, getByCategory, update, remove } = require('../../models/product.model');
 
+// TODO: Paginado de los products
 router.get('/', (req, res) => {
     // 1 - Recuperar los productos de la base de datos
     // 2 - Enviar en formato JSON los productos al cliente

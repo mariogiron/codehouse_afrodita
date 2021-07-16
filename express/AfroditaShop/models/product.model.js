@@ -82,6 +82,19 @@ const remove = (productId) => {
     });
 }
 
+const getByClient = (clientId) => {
+    return new Promise((resolve, reject) => {
+        db.query(
+            'select p.* from products p, tbi_clients_products tbi where p.id = tbi.product_id and tbi.client_id = ?',
+            [clientId],
+            (err, result) => {
+                if (err) return reject(err);
+                resolve(result);
+            }
+        );
+    });
+}
+
 module.exports = {
-    getAll, getById, create, getByCategory, update, remove
+    getAll, getById, create, getByCategory, update, remove, getByClient
 }
