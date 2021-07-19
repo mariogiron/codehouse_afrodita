@@ -1,4 +1,4 @@
-const { getAll, create } = require('../../models/client.model');
+const { getAll, create, getByUserId } = require('../../models/client.model');
 const { getByClient } = require('../../models/product.model');
 
 const router = require('express').Router();
@@ -33,6 +33,13 @@ router.post('/', async (req, res) => {
 
 // DELETE
 
-// TODO: Recuperar todos los clientes del usuario logado
+router.get('/user', async (req, res) => {
+    try {
+        const clients = await getByUserId(req.user.id);
+        res.json(clients);
+    } catch (error) {
+        res.json({ error: error.message });
+    }
+});
 
 module.exports = router;

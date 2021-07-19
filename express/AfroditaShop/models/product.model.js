@@ -1,13 +1,16 @@
+const { executeQuery } = require('../helpers');
+
 // Recupero todos los productos
-const getAll = () => {
-    const prom = new Promise((resolve, reject) => {
-        db.query('select * from products', (err, result) => {
-            if (err) return reject(err);
-            resolve(result);
-        });
-    });
-    return prom;
+const getAll = (page = 1, limit = 5) => {
+    return executeQuery(
+        'select * from products limit ? offset ?',
+        [limit, limit * (page - 1)]
+    );
 };
+
+// page: 1,2,3,4,5,6
+// limit: 5
+// offset: limit * (page-1)
 
 // Recupero un producto por ID
 // select * from products where id = 1

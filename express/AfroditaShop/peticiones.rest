@@ -1,5 +1,5 @@
 GET http://localhost:3000/api/products
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwaXJlZF9hdCI6MTYyNjY5MzIwMCwiY3JlYXRlZF9hdCI6MTYyNjY5MjkwMCwicm9sZSI6IlIiLCJpYXQiOjE2MjY2OTI5MDB9.cd8WhAXAo0oh0YnLdwtRnbVRgWYtc2LbMtIF26UA-7w
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMywiZXhwaXJlZF9hdCI6MTYyNzEzNDgyNCwiY3JlYXRlZF9hdCI6MTYyNjcwMjgyNCwicm9sZSI6IlIiLCJpYXQiOjE2MjY3MDI4MjR9.kymg2NJIZtKq-oYt83Otehle3_jNBwfmBhB8jq-SlRE
 
 ###
 GET http://localhost:3000/api/products/v2
@@ -37,7 +37,7 @@ GET http://localhost:3000/api/products/cat/moda
 
 ###
 GET http://localhost:3000/api/clients
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwaXJlZF9hdCI6MTYyNjY5NDUyNywiY3JlYXRlZF9hdCI6MTYyNjY5NDIyNywicm9sZSI6IlIiLCJpYXQiOjE2MjY2OTQyMjd9.Nl0pGyDLuFhbSA36p6-JZSazU2zGXz7Mdfp8HPknUZo
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwaXJlZF9hdCI6MTYyNjY5NDk5NSwiY3JlYXRlZF9hdCI6MTYyNjY5NDY5NSwicm9sZSI6IlIiLCJpYXQiOjE2MjY2OTQ2OTV9.f24yhWWD5ytjaldJB-o4sCv2Tf9YGHmWfv9ruWzQ3-8
 
 ###
 POST http://localhost:3000/api/clients
@@ -47,8 +47,8 @@ POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 {
-    "username": "Federico",
-    "email": "federico@gmail.com",
+    "username": "Marisol",
+    "email": "marisol@gmail.com",
     "password": "Admin123!"
 }
 
@@ -57,6 +57,10 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-    "email": "federico@gmail.com",
+    "email": "marisol@gmail.com",
     "password": "Admin123!"
 }
+
+###
+GET http://localhost:3000/api/clients/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMywiZXhwaXJlZF9hdCI6MTYyNzEzNDgyNCwiY3JlYXRlZF9hdCI6MTYyNjcwMjgyNCwicm9sZSI6IlIiLCJpYXQiOjE2MjY3MDI4MjR9.kymg2NJIZtKq-oYt83Otehle3_jNBwfmBhB8jq-SlRE

@@ -24,6 +24,13 @@ const create = ({ name, email, address, phone }) => {
     );
 };
 
+const getByUserId = (userId) => {
+    return executeQuery(
+        'select * from clients where user_id = ?',
+        [userId]
+    );
+}
+
 module.exports = {
-    getAll, create
+    getAll, create, getByUserId
 }
