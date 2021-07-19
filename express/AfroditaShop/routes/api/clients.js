@@ -33,4 +33,6 @@ router.post('/', async (req, res) => {
 
 // DELETE
 
+// TODO: Recuperar todos los clientes del usuario logado
+
 module.exports = router;

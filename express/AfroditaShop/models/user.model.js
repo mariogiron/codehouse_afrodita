@@ -14,6 +14,13 @@ const getByEmail = (email) => {
     );
 }
 
+const getById = (userId) => {
+    return executeQueryUnique(
+        'select * from users where id = ?',
+        [userId]
+    );
+}
+
 module.exports = {
-    create, getByEmail
+    create, getByEmail, getById
 }

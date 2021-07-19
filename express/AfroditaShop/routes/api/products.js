@@ -4,6 +4,9 @@ const { getAll, getById, create, getByCategory, update, remove } = require('../.
 
 // TODO: Paginado de los products
 router.get('/', (req, res) => {
+
+    console.log(req.user);
+
     // 1 - Recuperar los productos de la base de datos
     // 2 - Enviar en formato JSON los productos al cliente
     getAll()

@@ -1,4 +1,5 @@
 GET http://localhost:3000/api/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwaXJlZF9hdCI6MTYyNjY5MzIwMCwiY3JlYXRlZF9hdCI6MTYyNjY5MjkwMCwicm9sZSI6IlIiLCJpYXQiOjE2MjY2OTI5MDB9.cd8WhAXAo0oh0YnLdwtRnbVRgWYtc2LbMtIF26UA-7w
 
 ###
 GET http://localhost:3000/api/products/v2
@@ -36,6 +37,7 @@ GET http://localhost:3000/api/products/cat/moda
 
 ###
 GET http://localhost:3000/api/clients
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMiwiZXhwaXJlZF9hdCI6MTYyNjY5NDUyNywiY3JlYXRlZF9hdCI6MTYyNjY5NDIyNywicm9sZSI6IlIiLCJpYXQiOjE2MjY2OTQyMjd9.Nl0pGyDLuFhbSA36p6-JZSazU2zGXz7Mdfp8HPknUZo
 
 ###
 POST http://localhost:3000/api/clients
@@ -45,7 +47,16 @@ POST http://localhost:3000/api/users/register
 Content-Type: application/json
 
 {
-    "username": "mario",
-    "email": "mario6@gmail.com",
-    "password": "12345"
+    "username": "Federico",
+    "email": "federico@gmail.com",
+    "password": "Admin123!"
+}
+
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "federico@gmail.com",
+    "password": "Admin123!"
 }
