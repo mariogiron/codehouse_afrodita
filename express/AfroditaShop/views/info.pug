@@ -1,0 +1,17 @@
+extends layouts/layout_main
+
+mixin list(arr)
+    ul
+        each val in arr
+            li= val
+        else
+            li No hay elementos
+
+block main
+    h3 Página de información
+    p Esta es la página para informarse de las cosas
+    +list([])
+    +list([1,2,3,4,5,6]) 
+    +list(people.map(person => person.name + ' ' + person.surname))
+    p 
+        | Contenido del párrafo

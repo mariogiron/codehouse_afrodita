@@ -1,5 +1,49 @@
-extends layout
+extends layouts/layout_main
 
-block content
-  h1= title
-  p Welcome to #{title}
+block main
+	h2 Página 
+	div.uno
+		a(href="http://www.google.es", class="enlace") Enlace 1
+		a.enlace.otro(href="http://www.yahoo.es") Yahoo.es
+		a#enlacePrincipal.enlace(href="http://applesfera.com") Applesfera
+
+	div.dos
+		p= title
+		p El valor del título es: #{title}
+		p(style={color: 'blue', 'background-color': 'red'}) Párrafo con estilos
+
+	.tres 
+		- const clases = ['uno', 'dos', 'tres']
+		p(class=clases) Párrafo con clases
+		p(class=clasesV2) Segundo párrafo con clases
+
+	.cuatro 
+		case products
+			when 0
+				p No tienes productos
+			when 1
+				p Tienes 1 producto
+			default 
+				p Tienes #{products} productos
+
+	.cinco 
+		// Comentario que aparece en el HTML
+		//- Comentario para el desarrollador
+		ul
+			- for(let i = 0; i< clasesV2.length; i++)
+				li= clasesV2[i]
+
+	.seis 
+		ul 
+			each val, index in clasesV2
+				//- li= (index+1) + ' - ' + val
+				li #{index+1} - #{val}
+
+		ul
+			each animal in animales
+				li= animal
+			else
+				li No hay animales
+
+block footer
+	p Copyright 2021 @
