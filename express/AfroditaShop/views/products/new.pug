@@ -1,4 +1,23 @@
 extends ../layouts/layout_products.pug
 
 block main
-    h3 PRUEBA DE NEW
+    h3.title.is-3 Crea un nuevo producto
+    form(action="/products/create", method="POST")
+        .field
+            label.label Nombre
+            .control
+                input.input(type="text", name="name")
+        .field
+            label.label Descripción
+            .control
+                input.input(type="text", name="description")
+        .field
+            label.label Precio
+            .control
+                input.input(type="text", name="price")
+        .field
+            label.label Categoría
+            .control
+                input.input(type="text", name="category")
+        .control
+            button.button.is-info.is-fullwidth Enviar

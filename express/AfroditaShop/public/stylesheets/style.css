@@ -1,8 +1,10 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-a {
-  color: #00B7FF;
+.products .card{
+  width: 25%;
+  margin: 15px;
 }

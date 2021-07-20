@@ -8,9 +8,7 @@ router.get('/', (req, res) => {
     // 3 - Dentro de la vista iterarlos para mostrarlos
 
     getAll(1, 10)
-        .then(products => {
-            res.render('products/index', { products });
-        })
+        .then(products => res.render('products/index', { products }))
         .catch(error => console.log(error));
 });
 
@@ -24,6 +22,11 @@ router.get('/edit', (req, res) => {
 
 router.get('/remove', (req, res) => {
     res.render('products/remove');
+});
+
+router.post('/create', (req, res) => {
+    console.log(req.body);
+    res.send('Creamos el producto');
 });
 
 module.exports = router;
