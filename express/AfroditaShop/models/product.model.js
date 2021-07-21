@@ -31,16 +31,10 @@ const getById = (productId) => {
 // Inserta nuevo registro en la BD
 // insert into products (name, description, price, category, available, created_at) values (...)
 const create = ({ name, description, price, category }) => {
-    return new Promise((resolve, reject) => {
-        db.query(
-            'insert into products (name, description, price, category, available, created_at) values (?, ?, ?, ?, ?, ?)',
-            [name, description, price, category, true, new Date()],
-            (err, result) => {
-                if (err) return reject(err);
-                resolve(result);
-            }
-        );
-    });
+    return executeQuery(
+        'insert into products (name, description, price, category, available, created_at) values (?, ?, ?, ?, ?, ?)',
+        [name, description, price, category, true, new Date()]
+    );
 };
 
 // Recuperar productos por categoría

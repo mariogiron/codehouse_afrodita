@@ -25,8 +25,13 @@ GET localhost:3000/products
 GET localhost:3000/products/new
     VISTA: products/new.pug
 
-GET localhost:3000/products/edit
+GET localhost:3000/products/edit/PRODUCTID
     VISTA: products/edit.pug
+    1 - Antes de renderizar la vista tenemos que recuperar el producto a editar
+    2 - Renderizar la vista y pasarle el producto
+    3 - Generar el formulario dentro de la vista
+        - Dentro del formulario debemos incorporar los datos del producto a editar
+
     
 GET localhost:3000/products/remove
     VISTA: products/remove.pug

@@ -1,4 +1,27 @@
 extends ../layouts/layout_products.pug
 
 block main
-    h3 PRUEBA DE EDIT
+    if product
+        h3.title.is-3 Edita el producto #{product.name}
+        form(action="/products/update", method="POST")
+            .field
+                label.label Nombre
+                .control
+                    input.input(type="text", name="name", value=product.name)
+            .field
+                label.label Descripción
+                .control
+                    input.input(type="text", name="description", value=product.description)
+            .field
+                label.label Precio
+                .control
+                    input.input(type="text", name="price", value=product.price)
+            .field
+                label.label Categoría
+                .control
+                    input.input(type="text", name="category", value=product.category)
+            input(type="hidden", name="productId", value=product.id)
+            .control
+                button.button.is-info.is-fullwidth Enviar
+    else
+        p No existe el producto que quieres editar
