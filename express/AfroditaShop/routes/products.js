@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     getAll(page, 5)
         .then(products => res.render(
             'products/index',
-            { products, page: parseInt(page) }
+            { products, page: parseInt(page), message: req.flash('message') }
         ))
         .catch(error => console.log(error));
 });
@@ -43,7 +43,10 @@ router.get('/:productId', (req, res) => {
 
 router.post('/create', (req, res) => {
     create(req.body)
-        .then(result => res.redirect('/products'))
+        .then(result => {
+            req.flash('message', 'Se ha creado correctamente el nuevo producto');
+            res.redirect('/products')
+        })
         .catch(error => console.log(error));
 });
 
@@ -59,4 +62,3 @@ router.post('/update', (req, res) => {
 module.exports = router;
 
 // TODO: fetch sobre el API
-// TODO: ngrok

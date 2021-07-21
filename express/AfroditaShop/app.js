@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const session = require('express-session');
+const flash = require('connect-flash');
 
 require('dotenv').config();
 
@@ -23,8 +25,14 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser('secret'));
+app.use(session({
+  secret: 'SECRET',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
