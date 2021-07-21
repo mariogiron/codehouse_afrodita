@@ -1,4 +1,4 @@
-const { executeQuery } = require('../helpers');
+const { executeQuery, executeQueryUnique } = require('../helpers');
 
 // Recupero todos los productos
 const getAll = (page = 1, limit = 5) => {
@@ -15,17 +15,10 @@ const getAll = (page = 1, limit = 5) => {
 // Recupero un producto por ID
 // select * from products where id = 1
 const getById = (productId) => {
-    return new Promise((resolve, reject) => {
-        db.query(
-            'select * from products where id = ?',
-            [productId],
-            (err, result) => {
-                if (err) return reject(err);
-                if (result.length !== 1) return resolve(null);
-                resolve(result[0]);
-            }
-        );
-    });
+    return executeQueryUnique(
+        'select * from products where id = ?',
+        [productId]
+    );
 };
 
 // Inserta nuevo registro en la BD

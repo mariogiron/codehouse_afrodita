@@ -2,6 +2,17 @@ extends ../layouts/layout_products.pug
 
 block main
     h3.title.is-3 Listado de productos (#{products.length})
+    h4.title.is-4 Página #{page}
+    .page-buttons.mb-4
+        if page !== 1
+            a.button(href="?page="+(page-1)) Anterior 
+        else 
+            a.button(disabled) Anterior 
+
+        if products.length < 5
+            a.button(disabled) Siguiente
+        else    
+            a.button(href="?page="+(page+1)) Siguiente
     table.table.is-fullwidth.is-striped.is-bordered
         thead
             tr
@@ -10,6 +21,7 @@ block main
                 th Precio 
                 th Categoría
                 th Disponible
+                th Acciones
         tbody
             each product in products 
                 tr
@@ -18,6 +30,10 @@ block main
                     td #{product.price}€
                     td= product.category
                     td= (product.available) ? 'SÍ 🥳' : 'NO 🛑'
+                    td
+                        a.button.is-small.mr-1(href="/products/"+product.id) 👁
+                        a.button.is-small.mr-1(href="/products/edit/"+product.id) ✍️
+                        a.button.is-small(href="/products/remove/"+product.id, onclick='return confirm("¿Seguro que quieres borrarlo?")') 🗑
 
     .products
         each product in products
@@ -29,6 +45,8 @@ block main
                         p= product.description
                         p #{product.price} 💶
                 footer.card-footer
-                    a.card-footer-item(href='#') Save
-                    a.card-footer-item(href='#') Edit
-                    a.card-footer-item(href='#') Delete
+                    a.card-footer-item(href='/products/'+product.id) View
+                    a.card-footer-item(href='/products/edit/'+product.id) Edit
+                    a.card-footer-item(
+                        href='/products/remove/'+product.id, 
+                        onclick='return confirm("¿Seguro que quieres borrarlo?")') Delete

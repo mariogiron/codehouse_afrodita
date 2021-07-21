@@ -1,14 +1,19 @@
 const router = require('express').Router();
 
-const { getAll, create, getById, update } = require('../models/product.model');
+const { getAll, create, getById, update, remove } = require('../models/product.model');
 
 router.get('/', (req, res) => {
     // 1 - Recuperar todos los productos de la BD X
     // 2 - Pasar los productos recuperados a la vista
     // 3 - Dentro de la vista iterarlos para mostrarlos
 
-    getAll(1, 20)
-        .then(products => res.render('products/index', { products }))
+    const page = req.query.page || 1;
+
+    getAll(page, 5)
+        .then(products => res.render(
+            'products/index',
+            { products, page: parseInt(page) }
+        ))
         .catch(error => console.log(error));
 });
 
@@ -24,8 +29,16 @@ router.get('/edit/:productId', (req, res) => {
         .catch(error => console.log(error));
 });
 
-router.get('/remove', (req, res) => {
-    res.render('products/remove');
+router.get('/remove/:productId', (req, res) => {
+    remove(req.params.productId)
+        .then(result => res.redirect('/products'))
+        .catch(error => console.log(error));
+});
+
+router.get('/:productId', (req, res) => {
+    getById(req.params.productId)
+        .then(product => res.render('products/view', { product }))
+        .catch(error => console.log(error));
 });
 
 router.post('/create', (req, res) => {
@@ -46,5 +59,4 @@ router.post('/update', (req, res) => {
 module.exports = router;
 
 // TODO: fetch sobre el API
-// TODO: paginación de los productos
 // TODO: ngrok

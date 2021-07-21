@@ -1,0 +1,9 @@
+extends ../layouts/layout_products.pug
+
+block main
+    h3.title.is-3= product.name
+    p= product.description
+    button.button= product.price
+    p= product.category
+    p= product.available
+    p= product.created_at

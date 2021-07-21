@@ -33,5 +33,12 @@ GET localhost:3000/products/edit/PRODUCTID
         - Dentro del formulario debemos incorporar los datos del producto a editar
 
     
-GET localhost:3000/products/remove
-    VISTA: products/remove.pug
+GET localhost:3000/products/remove/PRODUCTID
+    1 - A partir del id del producto borramos dicho producto de la BD
+    2 - Redirect a /products
+
+GET localhost:3000/products/PRODUCTID
+Objetivo Final: Renderizar una vista que muestre el producto seleccionado
+    1 - Pensar cómo crear la ruta 
+    2 - Recuperar el producto
+    3 - Pasar el producto a la vista y renderizarlo
