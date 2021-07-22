@@ -1,0 +1,20 @@
+POST http://localhost:3000/api/properties
+Content-Type: application/json
+
+{
+    "street": "barco",
+    "number": 27,
+    "cp": 28010,
+    "floor": 2,
+    "rooms": 5,
+    "bathrooms": 1,
+    "sale": true,
+    "price": 700000,
+    "created_at": "2021-07-22 15:09"
+}
+
+###
+GET http://localhost:3000/api/properties
+
+###
+GET http://localhost:3000/api/properties/60f96df5bb86af9a7646eba4
