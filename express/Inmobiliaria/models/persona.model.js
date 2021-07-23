@@ -20,4 +20,14 @@ personaSchema.virtual('full_name').set(function (newValue) {
     this.surname = arr[1];
 });
 
+// Métodos estáticos
+personaSchema.statics.actives = function () {
+    return this.model('Persona').find({ active: true });
+}
+
+// Método de instancia
+personaSchema.methods.sameAge = function () {
+    return this.model('Persona').find({ age: this.age });
+}
+
 module.exports = mongoose.model('Persona', personaSchema);

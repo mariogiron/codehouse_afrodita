@@ -19,6 +19,26 @@ GET localhost:3000/api/properties
 **¡¡¡Qué las rutas funcionen!!**
 **¡¡Qué todas las rutas respondan algo!!**
 
-GET localhost:3000/api/properties/PROPERTY_ID
+GET localhost:3000/api/properties/60f9484785dd63627a223280
     - Recuperar una property a través de su ID (findById)
     - Devolver un JSON con la property seleccionada 
+
+
+PUT localhost:3000/api/properties/60f9484785dd63627a223280
+    - Todos los datos de la edición los recibimos en req.body
+
+DELETE localhost:3000/api/properties/60f9484785dd63627a223280
+
+GET localhost:3000/api/properties/rango/20000/50000
+    - Función estática que nos devuelva las propiedades entre esos dos precios
+        - Hay que cerciorarse que recuperamos bien los params
+        - Property.range(MIN, MAX)
+
+
+GET localhost:3000/properties/new
+    - Renderiza la vista new
+    - Dentro de la vista mostramos un formulario con los campos
+    <form action="URL DONDE LO ENVIAMOS" method="POST">
+
+POST localhost:3000/properties/create
+    - req.body

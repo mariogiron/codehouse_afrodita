@@ -1,5 +1,6 @@
 const router = require('express').Router();
 
+const { findById } = require('../models/persona.model');
 const Persona = require('../models/persona.model');
 
 router.get('/create', (req, res) => {
@@ -73,6 +74,35 @@ router.get('/update_v3', async (req, res) => {
         { new: true }
     );
     res.json(pers);
+});
+
+router.get('/remove', async (req, res) => {
+    const result = await Persona.remove({ age: 25 })
+    res.json(result);
+});
+
+router.get('/remove_v2', async (req, res) => {
+    const result = await Persona.findByIdAndRemove('60f9484785dd63627a223280')
+    res.json(result);
+});
+
+router.get('/activas', async (req, res) => {
+    const personas = await Persona.find({ active: true });
+    res.json(personas);
+});
+
+router.get('/activas_v2', (req, res) => {
+    Persona.actives()
+        .then(personas => res.json(personas))
+        .catch(error => res.json(error));
+});
+
+router.get('/same_age', async (req, res) => {
+    // const pers = new Persona();
+    // pers.age = 48;
+    const pers = await findById('60f97b3c0be885b019c86bd5');
+    const personas = await pers.sameAge();
+    res.json(personas);
 });
 
 module.exports = router;

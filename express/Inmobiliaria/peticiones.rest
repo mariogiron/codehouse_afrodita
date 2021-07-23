@@ -18,3 +18,14 @@ GET http://localhost:3000/api/properties
 
 ###
 GET http://localhost:3000/api/properties/60f96df5bb86af9a7646eba4
+
+###
+PUT http://localhost:3000/api/properties/60f96df5bb86af9a7646eba4
+Content-Type: application/json
+
+{
+    "number": 34
+}
+
+###
+GET http://localhost:3000/api/properties/range/1000/80000

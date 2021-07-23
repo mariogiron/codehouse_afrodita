@@ -1,0 +1,19 @@
+<h1>Lista de Propiedades</h1>
+<div class="properties">
+    {{#each properties as |property|}}
+    <div class="ui card">
+        <div class="content">
+            <div class="header">{{property.street}} {{property.number}}</div>
+        </div>
+        <div class="content">
+            <p>CP: {{property.cp}}</p>
+            <p>Rooms: {{property.rooms}}</p>
+            <p>Bathrooms: {{property.bathrooms}}</p>
+            <a class="ui tag label">{{property.price}}€</a>
+        </div>
+        <div class="extra content">
+            <button class="ui button">Join Project</button>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -13,4 +13,10 @@ const propertySchema = new Schema({
     created_at: Date
 });
 
+propertySchema.statics.range = function (min, max) {
+    return this.model('Property').find({
+        price: { $gt: min, $lt: max }
+    });
+}
+
 module.exports = mongoose.model('Property', propertySchema);
