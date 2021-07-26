@@ -21,6 +21,29 @@ app.set('port', port);
 
 var server = http.createServer(app);
 
+const io = require('socket.io')(server);
+
+io.on('connection', (socket) => {
+  console.log('Se ha conectado un nuevo cliente');
+
+  // el valor de io.engine.clientsCount
+  // nos devuelve el número de clientes conectados
+  // 1 - cuando se conecta un nuevo cliente emitir un evento chat_users a TODOS
+  // 2 - dentro de ese evento, mandar el número de clientes conectados
+  // 3 - dentro de index.pug recuperar este evento y mostrarlo en el HTML
+  io.emit('chat_users', io.engine.clientsCount);
+
+  socket.broadcast.emit('chat_message', {
+    name: 'INFO',
+    message: 'Nuevo usuario en la sala'
+  });
+
+  socket.on('chat_message', (data) => {
+    io.emit('chat_message', data);
+  });
+
+})
+
 /**
  * Listen on provided port, on all network interfaces.
  */
