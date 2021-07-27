@@ -9,3 +9,9 @@
 
 - Dirección a coordenadas
 - Mostrar un mapa con la situación
+
+1 - Sacar la dirección del texto que recibimos con el comando
+2 - Librería node-geocoder - Pasamos una dirección, devuelve coordenadas
+3 - Respondemos en el bot con estas coordenadas
+
+## /dime frase a decir
