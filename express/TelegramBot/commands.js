@@ -91,4 +91,43 @@ const dimeFn = ctx => {
     ctx.replyWithAudio(url);
 }
 
-module.exports = { tiempoFn, tiempoFnAW, dondeFn, dimeFn };
+const categoryEmoji = (category) => {
+    let emoji = '';
+    switch (category) {
+        case 'Oficina':
+            emoji = '🗂';
+            break;
+        case 'Hogar':
+            emoji = '🏠';
+            break;
+        case 'Moda':
+            emoji = '👚'
+            break;
+    }
+    return emoji;
+}
+
+const productsFn = (ctx) => {
+    axios.get(process.env.PRODUCTS_API)
+        .then(response => {
+            const arrProductos = response.data;
+            let result = '';
+            for (let product of arrProductos) {
+                result += `${categoryEmoji(product.category)} ${product.name} - ${product.price}€\n`;
+            }
+            ctx.reply(result);
+        })
+        .catch(error => console.log(error));
+}
+
+const productsFnPro = async (ctx) => {
+    const response = await axios.get(process.env.PRODUCTS_API);
+
+    ctx.reply(
+        response.data
+            .map(product => `${categoryEmoji(product.category)} ${product.name} - ${product.price}€`)
+            .join('\n')
+    );
+}
+
+module.exports = { tiempoFn, tiempoFnAW, dondeFn, dimeFn, productsFn, productsFnPro };

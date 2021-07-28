@@ -15,3 +15,8 @@
 3 - Respondemos en el bot con estas coordenadas
 
 ## /dime frase a decir
+
+## /products
+    https://afrodita-shop-mario.herokuapp.com/api/products
+    - Recoja los productos del API y nos muestre (más o menos ordenado) 
+        Nombre - Precio - categoria con un emoji
