@@ -6,3 +6,26 @@
 .bg-aqua {
     background-color: aquamarine;
 }
+
+.vh-25 {
+    height: 25vh;
+}
+
+.vh-15 {
+    height: 15vh;
+}
+
+@media(min-width:992px) {
+    .vh-87 {
+        height: 87vh;
+    }
+    .vh-50 {
+        height: 50vh;
+    }
+    .vh-15 {
+        height: 15vh;
+    }
+    .vh-20 {
+        height: 20vh;
+    }
+}

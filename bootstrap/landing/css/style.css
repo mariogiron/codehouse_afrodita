@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+.bg-dark {
+    background-color: black !important;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255, 255, 255, .75);
+    border: 0px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.hero {
+    background-image: url('../images/bosque.jpg');
+    background-color: #999;
+    height: 90vh;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: multiply;
+}
+
+.linea {
+    width: 100px;
+    border: 1.5px solid;
+    opacity: 1;
+}
+
+.card .linea {
+    width: 50px;
+    border: 0.5px solid;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
