@@ -1,0 +1,44 @@
+@use "sass:map";
+$colors: (
+    header: tomato,
+    texto: orange,
+    footer: blue
+);
+$fontSizes: (
+    header: 24px,
+    p: 12px, 
+    footer: 18px
+);
+
+
+header {
+    height: 40px;
+    background-color: map.get($colors, header);
+}
+footer{
+    height: 40px;
+    background-color: map.get($colors, footer);
+}
+
+main p {
+    color: map.get($colors, texto);
+}
+
+@each $section in header, p, footer{
+    #{$section} {
+        font-size: map.get($fontSizes, $section);
+    }
+}
+
+@each $animal, $color in (perro, rgb(255, 0, 0)), (gato, green), (periquito, blue), (aguila, tomato) {
+    
+    .#{$animal}{
+         background-image: url('../images/#{$animal}.jpg');
+         border: 2px solid $color;
+         width:200px;
+         background-size: cover;
+         height: 100px;
+         display: inline-block;  
+    }
+   
+}

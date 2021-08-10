@@ -1,9 +1,23 @@
 @import 'reset';
 $fontSize: 1em;
 $numeroH: 6;
+$list-colors: #ff0000, #00ff00, #0000ff, #444444, tomato;
 
 @for $i from 1 through $numeroH {
     h#{$i}{
         font-size: $fontSize * ($numeroH - ($i - 1));
     }
+}
+
+.item{
+    padding: 20px;
+    background-color: beige;
+}
+
+@for $i from 1 through 5{
+    .item-#{$i} {
+        width: 10em * $i;
+        border: 2px solid nth($list-colors, $i);
+    }
+
 }

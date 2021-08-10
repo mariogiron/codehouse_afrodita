@@ -1,0 +1,62 @@
+.boton {
+  background-color: tomato;
+  display: block;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+.boton:hover {
+  background-color: black;
+}
+
+.enlace {
+  background-color: blue;
+  display: block;
+  width: 300px;
+  padding: 30px;
+  text-align: right;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+}
+.enlace:hover {
+  background-color: black;
+}
+
+.texto, h1 {
+  background-color: lightgray;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+.texto:hover, h1:hover {
+  color: blue;
+  background-color: lightcoral;
+}
+
+h1 {
+  font-size: 150px;
+  color: green;
+}
+
+.team, .aboutus {
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+  height: 60px;
+}
+
+.aboutus {
+  background-color: lightcoral;
+  height: 160px;
+}
+
+.team {
+  background-color: beige;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+header {
+  height: 40px;
+  background-color: tomato;
+}
+
+footer {
+  height: 40px;
+  background-color: blue;
+}
+
+main p {
+  color: orange;
+}
+
+header {
+  font-size: 24px;
+}
+
+p {
+  font-size: 12px;
+}
+
+footer {
+  font-size: 18px;
+}
+
+.perro {
+  background-image: url("../images/perro.jpg");
+  border: 2px solid red;
+  width: 200px;
+  background-size: cover;
+  height: 100px;
+  display: inline-block;
+}
+
+.gato {
+  background-image: url("../images/gato.jpg");
+  border: 2px solid green;
+  width: 200px;
+  background-size: cover;
+  height: 100px;
+  display: inline-block;
+}
+
+.periquito {
+  background-image: url("../images/periquito.jpg");
+  border: 2px solid blue;
+  width: 200px;
+  background-size: cover;
+  height: 100px;
+  display: inline-block;
+}
+
+.aguila {
+  background-image: url("../images/aguila.jpg");
+  border: 2px solid tomato;
+  width: 200px;
+  background-size: cover;
+  height: 100px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,57 @@
+@mixin miBoton($bgcolor, $width, $padding, $align, $color: white, $radio: 0px){
+    background-color: $bgcolor;
+    display: block;
+    width: $width;
+    padding: $padding; 
+    text-align: $align;
+    text-decoration: none;
+    color: $color;
+    border-radius: $radio;
+    &:hover{
+        background-color:black;
+    }
+}
+
+.boton{
+    @include miBoton(tomato, 100px, 10px, center);
+    margin-bottom: 10px;
+}
+
+.enlace{
+    @include miBoton(blue, 300px, 30px, right, white,20px);
+}
+
+.texto{
+    background-color:lightgray;
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    &:hover{
+        color: blue;
+        background-color:lightcoral;
+    }
+}
+
+h1{
+    @extend .texto;
+    font-size: 150px;
+    color: green;
+}
+
+%section{
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.aboutus{
+    @extend %section;
+    background-color: lightcoral;
+    height: 160px;
+}
+
+.team{
+    @extend %section;
+    background-color:beige;
+}
