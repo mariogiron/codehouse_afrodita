@@ -1,0 +1,9 @@
+@import 'reset';
+$fontSize: 1em;
+$numeroH: 6;
+
+@for $i from 1 through $numeroH {
+    h#{$i}{
+        font-size: $fontSize * ($numeroH - ($i - 1));
+    }
+}

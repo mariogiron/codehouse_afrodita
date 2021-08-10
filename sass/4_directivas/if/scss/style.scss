@@ -1,0 +1,13 @@
+$darkmode: yes;
+
+.caja{
+    padding: 10px;
+    @if($darkmode == none)
+    {
+        border: 2px solid brown;
+        background-color: beige;
+    }@else{
+        border: 2px solid black;
+        background-color: grey;
+    }
+}

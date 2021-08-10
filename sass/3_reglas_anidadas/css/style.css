@@ -1,0 +1,30 @@
+main h1 {
+  font-size: 64px;
+  font-family: "Arial";
+  font-style: italic;
+  color: tomato;
+}
+main section {
+  padding: 20px;
+}
+main section h2 {
+  color: blue;
+  font-size: 18px;
+}
+main section article a {
+  background-color: tomato;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+main section article a:hover {
+  background-color: red;
+}
+@media (min-width: 992px) {
+  main section article a {
+    background-color: blue;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

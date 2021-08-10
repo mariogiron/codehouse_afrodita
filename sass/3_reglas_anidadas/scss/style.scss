@@ -1,0 +1,36 @@
+$breakpointTablet: 992px;
+
+main{
+    h1{
+        font: {
+            size: 64px;
+            family: 'Arial';
+            style: italic;
+        }
+        color: tomato;
+    }
+    section{
+        padding: 20px;
+        h2{
+            color: blue;
+            font-size: 18px;
+        }
+        article a {
+            background-color: tomato;
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            text: {
+                decoration: none
+            }
+            &:hover{
+                background-color: red;
+            }
+        }
+        @media (min-width: $breakpointTablet) {
+            article a {
+                background-color:blue;
+            }
+        }
+    }
+}
