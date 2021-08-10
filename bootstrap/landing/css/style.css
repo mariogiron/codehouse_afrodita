@@ -44,3 +44,56 @@ body {
     width: 100%;
     height: auto;
 }
+
+.list-group-flush>.list-group-item {
+    border-width: 0 0 0px;
+}
+
+.list-group-item {
+    padding: .3rem 0rem;
+    color: rgba(85, 85, 85, 0.5)
+}
+
+.text-gray {
+    color: rgba(85, 85, 85, 0.5)
+}
+
+textarea {
+    resize: none;
+}
+
+.form-control::placeholder {
+    color: rgba(85, 85, 85, 0.5);
+    font-weight: bold;
+    opacity: 1;
+}
+
+.form-control {
+    padding: .375rem 0rem;
+    border: 2px solid rgba(85, 85, 85, 0.1);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: rgba(85, 85, 85, 0.5);
+    border: 0;
+    border-radius: 0px;
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0px;
+}
+
+.social li {
+    display: inline-block;
+    margin: 0 0.5em;
+    background-color: rgba(255, 255, 255);
+    color: black;
+    width: 40px;
+    height: 40px;
+    padding-top: 7px;
+    border-radius: 50%;
+    opacity: 0.3;
+}
