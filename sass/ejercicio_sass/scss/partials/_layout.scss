@@ -23,3 +23,16 @@ img{
     width: 90%;
     margin: 0 auto;
 }
+
+.go{
+        @extend %boton;
+        background-color: $blueColor;
+        color: white;
+        transition: 0.5s;
+        &:hover{
+            background-color: tomato;
+        }
+        i{
+            margin-right: 5px;
+        }
+}

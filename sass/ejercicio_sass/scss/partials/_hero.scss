@@ -1,0 +1,70 @@
+.hero{
+    background-color: white;
+    box-shadow: 1px 1px 2px #999;
+    padding: 30px;  
+    border-radius:10px;
+    text-align: center;
+    color: $fontColor;
+    h1{
+        font-weight: 800;
+        font-size: 200%;
+    }
+    h3{
+        margin: 20px 0;
+        font-size: 150%;
+        line-height: 1.25em;
+    }
+    .info{
+        @extend %boton;
+        background-color: $bgColor;
+        color: $fontColor;
+        transition: 0.5s;
+        &:hover{
+            background-color:lightgray;
+        }
+        i{
+            margin-right: 5px;
+        }
+    }
+
+}
+
+
+
+@media(min-width: $breakpointTablet){
+    .hero{
+        padding: 30px 70px;   
+        h1 {
+            font-size: 260%;
+        }
+        h3{
+            font-size:200%;
+        }
+        .info, .go{
+            padding: 30px;
+            font-size: 200%;
+        }
+        
+
+       
+    }
+}
+
+
+@media(min-width: $breakpointPortatil){
+        .hero{
+            text-align: left;
+            padding: 60px;
+            h1{
+                font-size: 300%;
+            }
+            h3{
+                font-size: 250%;
+            }
+            .go, .info{
+                display: flex;
+                justify-content:space-between;
+                flex-direction: row-reverse;
+            }
+        }
+}

@@ -54,6 +54,16 @@ table {
   border-spacing: 0;
 }
 
+.hero .info, .go {
+  text-decoration: none;
+  display: block;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -280,6 +290,18 @@ img {
   margin: 0 auto;
 }
 
+.go {
+  background-color: #1691c3;
+  color: white;
+  transition: 0.5s;
+}
+.go:hover {
+  background-color: tomato;
+}
+.go i {
+  margin-right: 5px;
+}
+
 header {
   margin: 50px auto;
   text-align: center;
@@ -348,6 +370,67 @@ header .hamburger div {
   }
   header .hamburger {
     display: none;
+  }
+}
+.hero {
+  background-color: white;
+  box-shadow: 1px 1px 2px #999;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  color: #444;
+}
+.hero h1 {
+  font-weight: 800;
+  font-size: 200%;
+}
+.hero h3 {
+  margin: 20px 0;
+  font-size: 150%;
+  line-height: 1.25em;
+}
+.hero .info {
+  background-color: #e4e4e4;
+  color: #444;
+  transition: 0.5s;
+}
+.hero .info:hover {
+  background-color: lightgray;
+}
+.hero .info i {
+  margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 30px 70px;
+  }
+  .hero h1 {
+    font-size: 260%;
+  }
+  .hero h3 {
+    font-size: 200%;
+  }
+  .hero .info, .hero .go {
+    padding: 30px;
+    font-size: 200%;
+  }
+}
+@media (min-width: 996px) {
+  .hero {
+    text-align: left;
+    padding: 60px;
+  }
+  .hero h1 {
+    font-size: 300%;
+  }
+  .hero h3 {
+    font-size: 250%;
+  }
+  .hero .go, .hero .info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
   }
 }
 

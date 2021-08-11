@@ -18,3 +18,14 @@ $breakpointDesktop: 1200px;
 $columns: 12;
 $column-base-width: math.div(100%,$columns);
 $margin: 10px;
+
+%boton{
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    
+}
