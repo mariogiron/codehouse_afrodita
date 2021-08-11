@@ -1,0 +1,36 @@
+@use 'sass:map';
+header{
+   margin: 50px auto;
+   text: {
+    align: center;
+   }
+   .logo{
+       background-color: $logoColor;
+       padding: 10px 30px;
+       border-radius: 5px;
+       font-family: map.get($fontsMap, 'oleo');
+       font-size: 3 * $fontSize;
+       display: inline-block;
+       margin: 0 auto;
+       a{
+           text-decoration: none;
+           color: white;
+       }
+   }
+   nav{
+       display: none;
+   }
+   .hamburger{
+       width: 40px;
+       background-color: rgba(0, 0, 0, 0.3);
+       border-radius:10px;
+       padding: 10px 10px 9px 10px;
+       position: fixed;
+       top: 5px;
+       left: 5px;
+       div{
+           border-top: 3px solid white;
+           margin-bottom:  3px;
+       }
+   }
+}

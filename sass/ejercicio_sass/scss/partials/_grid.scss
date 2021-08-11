@@ -1,0 +1,44 @@
+@use "sass:math";
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*='col-']{
+    margin: $margin;
+}
+
+//movil - small
+
+@for $i from 1 through $columns{
+    .col-#{$i}{
+        width: calc( #{($column-base-width * $i)} - #{($margin * 2)}) 
+    }
+}
+
+//tablet - medium
+@media(min-width: $breakpointTablet){
+    @for $i from 1 through $columns{
+        .col-md-#{$i}{
+            width: calc( #{($column-base-width * $i)} - #{($margin * 2)}) 
+        }
+    }
+}
+//portatil - large
+@media(min-width: $breakpointPortatil){
+    @for $i from 1 through $columns{
+        .col-lg-#{$i}{
+            width: calc( #{($column-base-width * $i)} - #{($margin * 2)}) 
+        }
+    }
+}
+
+
+//desktop - xlarge
+@media(min-width: $breakpointDesktop){
+    @for $i from 1 through $columns{
+        .col-xl-#{$i}{
+            width: calc( #{($column-base-width * $i)} - #{($margin * 2)}) 
+        }
+    }
+}

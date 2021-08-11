@@ -1,0 +1,317 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:wght@300;800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*=col-] {
+  margin: 10px;
+}
+
+.col-1 {
+  width: calc( 8.3333333333% - 20px);
+}
+
+.col-2 {
+  width: calc( 16.6666666667% - 20px);
+}
+
+.col-3 {
+  width: calc( 25% - 20px);
+}
+
+.col-4 {
+  width: calc( 33.3333333333% - 20px);
+}
+
+.col-5 {
+  width: calc( 41.6666666667% - 20px);
+}
+
+.col-6 {
+  width: calc( 50% - 20px);
+}
+
+.col-7 {
+  width: calc( 58.3333333333% - 20px);
+}
+
+.col-8 {
+  width: calc( 66.6666666667% - 20px);
+}
+
+.col-9 {
+  width: calc( 75% - 20px);
+}
+
+.col-10 {
+  width: calc( 83.3333333333% - 20px);
+}
+
+.col-11 {
+  width: calc( 91.6666666667% - 20px);
+}
+
+.col-12 {
+  width: calc( 100% - 20px);
+}
+
+@media (min-width: 768px) {
+  .col-md-1 {
+    width: calc( 8.3333333333% - 20px);
+  }
+
+  .col-md-2 {
+    width: calc( 16.6666666667% - 20px);
+  }
+
+  .col-md-3 {
+    width: calc( 25% - 20px);
+  }
+
+  .col-md-4 {
+    width: calc( 33.3333333333% - 20px);
+  }
+
+  .col-md-5 {
+    width: calc( 41.6666666667% - 20px);
+  }
+
+  .col-md-6 {
+    width: calc( 50% - 20px);
+  }
+
+  .col-md-7 {
+    width: calc( 58.3333333333% - 20px);
+  }
+
+  .col-md-8 {
+    width: calc( 66.6666666667% - 20px);
+  }
+
+  .col-md-9 {
+    width: calc( 75% - 20px);
+  }
+
+  .col-md-10 {
+    width: calc( 83.3333333333% - 20px);
+  }
+
+  .col-md-11 {
+    width: calc( 91.6666666667% - 20px);
+  }
+
+  .col-md-12 {
+    width: calc( 100% - 20px);
+  }
+}
+@media (min-width: 996px) {
+  .col-lg-1 {
+    width: calc( 8.3333333333% - 20px);
+  }
+
+  .col-lg-2 {
+    width: calc( 16.6666666667% - 20px);
+  }
+
+  .col-lg-3 {
+    width: calc( 25% - 20px);
+  }
+
+  .col-lg-4 {
+    width: calc( 33.3333333333% - 20px);
+  }
+
+  .col-lg-5 {
+    width: calc( 41.6666666667% - 20px);
+  }
+
+  .col-lg-6 {
+    width: calc( 50% - 20px);
+  }
+
+  .col-lg-7 {
+    width: calc( 58.3333333333% - 20px);
+  }
+
+  .col-lg-8 {
+    width: calc( 66.6666666667% - 20px);
+  }
+
+  .col-lg-9 {
+    width: calc( 75% - 20px);
+  }
+
+  .col-lg-10 {
+    width: calc( 83.3333333333% - 20px);
+  }
+
+  .col-lg-11 {
+    width: calc( 91.6666666667% - 20px);
+  }
+
+  .col-lg-12 {
+    width: calc( 100% - 20px);
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-1 {
+    width: calc( 8.3333333333% - 20px);
+  }
+
+  .col-xl-2 {
+    width: calc( 16.6666666667% - 20px);
+  }
+
+  .col-xl-3 {
+    width: calc( 25% - 20px);
+  }
+
+  .col-xl-4 {
+    width: calc( 33.3333333333% - 20px);
+  }
+
+  .col-xl-5 {
+    width: calc( 41.6666666667% - 20px);
+  }
+
+  .col-xl-6 {
+    width: calc( 50% - 20px);
+  }
+
+  .col-xl-7 {
+    width: calc( 58.3333333333% - 20px);
+  }
+
+  .col-xl-8 {
+    width: calc( 66.6666666667% - 20px);
+  }
+
+  .col-xl-9 {
+    width: calc( 75% - 20px);
+  }
+
+  .col-xl-10 {
+    width: calc( 83.3333333333% - 20px);
+  }
+
+  .col-xl-11 {
+    width: calc( 91.6666666667% - 20px);
+  }
+
+  .col-xl-12 {
+    width: calc( 100% - 20px);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  background-color: #e4e4e4;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  margin: 50px auto;
+  text-align: center;
+}
+header .logo {
+  background-color: #FC4887;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-family: "Oleo Script";
+  font-size: 3em;
+  display: inline-block;
+  margin: 0 auto;
+}
+header .logo a {
+  text-decoration: none;
+  color: white;
+}
+header nav {
+  display: none;
+}
+header .hamburger {
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 10px 10px 9px 10px;
+  position: fixed;
+  top: 5px;
+  left: 5px;
+}
+header .hamburger div {
+  border-top: 3px solid white;
+  margin-bottom: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

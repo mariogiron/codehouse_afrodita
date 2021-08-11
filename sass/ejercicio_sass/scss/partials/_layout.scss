@@ -1,0 +1,25 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Open+Sans:wght@300;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: map.get($fontsMap, 'open'), sans-serif;
+    font-size: $fontSize;
+    background-color: $bgColor;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container{
+    max-width: $breakpointDesktop;
+    width: 90%;
+    margin: 0 auto;
+}

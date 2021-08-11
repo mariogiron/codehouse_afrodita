@@ -1,10 +1,20 @@
+@use "sass:math";
+
 $bgColor: #e4e4e4;
 $fontColor: #444;
 $logoColor: #FC4887;
 $blueColor: #1691c3;
 $fontSize: 1em;
-$margin: 10px;
+$fontsMap: (
+    oleo : 'Oleo Script', 
+    open : 'Open Sans'
+);
+
 
 $breakpointTablet: 768px;
 $breakpointPortatil: 996px;
 $breakpointDesktop: 1200px;
+
+$columns: 12;
+$column-base-width: math.div(100%,$columns);
+$margin: 10px;
