@@ -42,8 +42,12 @@ header{
             justify-content: space-between;
             align-items: center;
         }
+        .logo{
+            margin-left: $margin;
+        }
         nav{
             display: block;
+            margin-right: $margin;
             ul{
                 display: flex;
                 li{

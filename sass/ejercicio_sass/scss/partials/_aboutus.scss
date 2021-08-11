@@ -1,0 +1,48 @@
+.aboutus{
+    color: $fontColor;
+    h4{
+        font-size: 1.35em;
+        font-weight: 800;
+     
+    }
+    h3{
+        font-size: 2em;
+        font-weight: 800;
+        
+    }
+    figure{
+        border-top-left-radius: 10px;
+         border-bottom-right-radius: 10px;
+        overflow: hidden;
+    }
+    .go{
+        text-align: center;
+        font-size: 120%;
+        margin-top: 20px;
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    p{
+        line-height: 1.5em;
+        margin-top: 20px; 
+    }
+
+}
+
+@media(min-width: $breakpointPortatil){
+
+    .aboutus{
+        background-color:white;
+        padding: 40px 0;
+        .container{
+            flex-direction: row;
+            &>div:last-child .go{
+                width: 35%;
+            }
+        }
+        
+    }
+
+
+}

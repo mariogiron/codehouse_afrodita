@@ -302,6 +302,10 @@ img {
   margin-right: 5px;
 }
 
+strong {
+  font-weight: 800;
+}
+
 header {
   margin: 50px auto;
   text-align: center;
@@ -341,8 +345,12 @@ header .hamburger div {
     justify-content: space-between;
     align-items: center;
   }
+  header .logo {
+    margin-left: 10px;
+  }
   header nav {
     display: block;
+    margin-right: 10px;
   }
   header nav ul {
     display: flex;
@@ -435,6 +443,7 @@ header .hamburger div {
 }
 .services {
   padding: 30px 0;
+  color: #444;
 }
 .services h2 {
   display: none;
@@ -457,6 +466,92 @@ header .hamburger div {
 }
 .services article p {
   line-height: 1.5em;
+}
+
+.aboutus {
+  color: #444;
+}
+.aboutus h4 {
+  font-size: 1.35em;
+  font-weight: 800;
+}
+.aboutus h3 {
+  font-size: 2em;
+  font-weight: 800;
+}
+.aboutus figure {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+.aboutus .go {
+  text-align: center;
+  font-size: 120%;
+  margin-top: 20px;
+}
+.aboutus .container {
+  flex-direction: column-reverse;
+}
+.aboutus p {
+  line-height: 1.5em;
+  margin-top: 20px;
+}
+
+@media (min-width: 996px) {
+  .aboutus {
+    background-color: white;
+    padding: 40px 0;
+  }
+  .aboutus .container {
+    flex-direction: row;
+  }
+  .aboutus .container > div:last-child .go {
+    width: 35%;
+  }
+}
+footer {
+  padding: 20px 0px;
+  color: #444;
+  text-align: center;
+}
+footer article {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0px;
+}
+footer article h4 {
+  font-size: 1.25em;
+  font-weight: 800;
+}
+footer article li {
+  margin: 12.5px 0;
+}
+footer article li a {
+  color: #444;
+}
+footer article li a:hover {
+  text-decoration: none;
+}
+footer article .social {
+  display: flex;
+  justify-content: center;
+}
+footer article .social li {
+  margin-right: 10px;
+  font-size: 2.25em;
+}
+
+@media (min-width: 768px) {
+  footer article {
+    border-bottom: none;
+  }
+}
+@media (min-width: 996px) {
+  footer {
+    text-align: left;
+  }
+  footer article .social {
+    justify-content: flex-start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

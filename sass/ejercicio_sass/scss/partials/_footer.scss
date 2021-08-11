@@ -1,0 +1,54 @@
+footer{
+    padding: 20px 0px;
+    color: $fontColor; 
+    text-align: center;
+    article{
+        border-bottom:  1px solid #ccc;
+        padding: 20px 0px;
+        h4{
+            font: {
+                size: 1.25em;
+                weight: 800;
+            }
+        }
+        li{
+            margin: ($margin*1.25) 0;
+            a{
+                color: $fontColor;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            li{
+                margin-right: 10px;
+                font-size: 2.25em;
+            }
+        }
+    }
+}
+
+@media(min-width: $breakpointTablet)
+{
+    footer{
+        article{
+            border-bottom:  none;
+        }
+    }
+}
+
+@media(min-width: $breakpointPortatil)
+{
+    footer{
+       text-align:left;
+       article{
+            .social{
+                    justify-content:flex-start;
+                    
+            }
+        }
+    }
+}
