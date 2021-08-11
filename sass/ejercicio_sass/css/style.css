@@ -291,7 +291,6 @@ header .logo {
   font-family: "Oleo Script";
   font-size: 3em;
   display: inline-block;
-  margin: 0 auto;
 }
 header .logo a {
   text-decoration: none;
@@ -312,6 +311,44 @@ header .hamburger {
 header .hamburger div {
   border-top: 3px solid white;
   margin-bottom: 3px;
+}
+
+@media (min-width: 996px) {
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    display: block;
+  }
+  header nav ul {
+    display: flex;
+  }
+  header nav ul li {
+    margin-left: 40px;
+  }
+  header nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    font-weight: 800;
+    font-size: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+  header nav ul li a:hover {
+    background-color: #444;
+    color: white;
+  }
+  header nav ul li .activo {
+    background-color: #444;
+    color: white;
+  }
+  header .hamburger {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
