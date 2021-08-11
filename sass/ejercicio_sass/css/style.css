@@ -433,5 +433,30 @@ header .hamburger div {
     flex-direction: row-reverse;
   }
 }
+.services {
+  padding: 30px 0;
+}
+.services h2 {
+  display: none;
+}
+.services article {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px #999;
+}
+.services article > div {
+  padding: 30px 20px;
+}
+.services article h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.services article h5 {
+  margin: 10px 0px 30px 0px;
+}
+.services article p {
+  line-height: 1.5em;
+}
 
 /*# sourceMappingURL=style.css.map */
