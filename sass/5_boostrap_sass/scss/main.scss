@@ -1,0 +1,41 @@
+$primary:       indigo !default;
+$secondary:     tomato;
+
+$border-radius:               0rem !default;
+$border-radius-sm:            0rem !default;
+$border-radius-lg:            0rem !default;
+$border-radius-pill:          0rem !default;
+
+$dark: rgb(10, 10, 124) !default;
+
+$container-max-widths: (
+  sm: 425px,
+  md: 768px,
+  lg: 960px,
+  xl: 1004px,
+  xxl: 1200px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 426px,
+  md: 769px,
+  lg: 961px,
+  xl: 1005px,
+  xxl: 1201px
+);
+
+@media(max-width: 1090px) and (min-width: 960px) {
+    .porfolio{
+        article .btn-primary{
+            
+            font-size:75%;
+        }
+
+        .btn {
+	        padding: 0.300rem;
+	    }
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
