@@ -19,4 +19,8 @@ export class AppComponent {
       { nombre: "Raquel", telefono: "663463", email: "ra@gmail.com" },
       { nombre: "Maria", telefono: "3463664", email: "m@gmail.com" })
   }
+
+  onTerminaCrono($event: any) {
+    console.log($event)
+  }
 }

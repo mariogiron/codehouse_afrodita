@@ -1,0 +1,13 @@
+.cronometro {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.cronometro p {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

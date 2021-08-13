@@ -1,0 +1,17 @@
+section {
+  padding: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+section div:first-child {
+  width: 30%;
+  padding: 10px;
+}
+
+section div:last-child {
+  width: 70%;
+  padding: 10px;
+}

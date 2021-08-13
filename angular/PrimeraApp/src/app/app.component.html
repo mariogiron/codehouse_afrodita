@@ -1,7 +1,11 @@
-<h1>Hola Mundo desde Angular</h1>
+<cronometro [inicio]="15" (terminaCrono)="onTerminaCrono($event)"></cronometro>
+<cronometro [inicio]="4" (terminaCrono)="onTerminaCrono($event)"></cronometro>
+<cronometro [inicio]="27" (terminaCrono)="onTerminaCrono($event)"></cronometro>
+
+<!-- <h1>Hola Mundo desde Angular</h1>
 <app-saludo></app-saludo>
 <restar [num1]="13" [num2]="7"></restar>
-<!-- <restar [num1]="35" [num2]="10"></restar> -->
+<restar [num1]="35" [num2]="10"></restar>
 <hr>
 <section>
   <div class="row">
@@ -24,4 +28,4 @@
       [email]="arrContacts[5].email">
     </user-profile>
   </div>
-</section>
+</section> -->
