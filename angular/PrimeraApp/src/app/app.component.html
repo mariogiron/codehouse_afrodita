@@ -1,2 +1,27 @@
 <h1>Hola Mundo desde Angular</h1>
 <app-saludo></app-saludo>
+<restar [num1]="13" [num2]="7"></restar>
+<!-- <restar [num1]="35" [num2]="10"></restar> -->
+<hr>
+<section>
+  <div class="row">
+    <user-profile class="user" [nombre]="arrContacts[0].nombre" [telefono]="arrContacts[0].telefono"
+      [email]="arrContacts[0].email">
+    </user-profile>
+    <user-profile class="user" [nombre]="arrContacts[1].nombre" [telefono]="arrContacts[1].telefono"
+      [email]="arrContacts[1].email">
+    </user-profile>
+    <user-profile class="user" [nombre]="arrContacts[2].nombre" [telefono]="arrContacts[2].telefono"
+      [email]="arrContacts[2].email">
+    </user-profile>
+    <user-profile class="user" [nombre]="arrContacts[3].nombre" [telefono]="arrContacts[3].telefono"
+      [email]="arrContacts[3].email">
+    </user-profile>
+    <user-profile class="user" [nombre]="arrContacts[4].nombre" [telefono]="arrContacts[4].telefono"
+      [email]="arrContacts[4].email">
+    </user-profile>
+    <user-profile class="user" [nombre]="arrContacts[5].nombre" [telefono]="arrContacts[5].telefono"
+      [email]="arrContacts[5].email">
+    </user-profile>
+  </div>
+</section>
