@@ -1,0 +1,7 @@
+.carrito {
+  display: flex;
+}
+
+.carrito>div {
+  width: 100%;
+}

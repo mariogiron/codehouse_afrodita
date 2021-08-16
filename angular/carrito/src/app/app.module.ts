@@ -3,18 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgstyleComponent } from './components/ngstyle/ngstyle.component';
-import { NgclassComponent } from './components/ngclass/ngclass.component';
-import { NgifComponent } from './components/ngif/ngif.component';
-import { NgforComponent } from './components/ngfor/ngfor.component';
+import { FormComponent } from './components/form/form.component';
+import { TotalCompraComponent } from './components/total-compra/total-compra.component';
+import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgstyleComponent,
-    NgclassComponent,
-    NgifComponent,
-    NgforComponent
+    FormComponent,
+    TotalCompraComponent,
+    ListaProductosComponent
   ],
   imports: [
     BrowserModule,

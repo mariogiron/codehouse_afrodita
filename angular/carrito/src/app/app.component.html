@@ -1,0 +1,9 @@
+<section class="carrito">
+  <div>
+    <app-form (productoSeleccionado)="onProductoSeleccionado($event)"></app-form>
+    <app-total-compra [productos]="productos"></app-total-compra>
+  </div>
+  <div>
+    <app-lista-productos [productos]="productos"></app-lista-productos>
+  </div>
+</section>

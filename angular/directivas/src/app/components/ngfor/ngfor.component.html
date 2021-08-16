@@ -1,0 +1,12 @@
+<h1>Juego de tronos</h1>
+<section class="episodios">
+  <h2>Episiodios primer temporada</h2>
+
+  <article *ngFor="let episodio of episodios; let i=index;">
+    <h3>{{i+1}} - {{episodio.title}}</h3>
+    <p>Director: {{episodio.director}}</p>
+    <hr>
+  </article>
+<!-- quiero que pinteis cada capitulo de un color de fondo alterno.-->
+
+</section>

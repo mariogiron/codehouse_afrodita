@@ -1,0 +1,15 @@
+<div class="form">
+  <div>
+    <label>Titulo producto</label><br>
+    <input type="text" placeholder="introduce un producto" [(ngModel)]="producto.titulo">
+  </div>
+  <div>
+    <label>Precio</label><br>
+    <input type="number" placeholder="introduce un precio" [(ngModel)]="producto.precio">
+  </div>
+  <div>
+    <label>Cantidad</label><br>
+    <input type="number" placeholder="introduce una cantidad" [(ngModel)]="producto.cantidad">
+  </div>
+  <button (click)="cargarProducto()">Cargar producto</button>
+</div>

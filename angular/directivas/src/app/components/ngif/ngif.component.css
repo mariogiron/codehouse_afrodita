@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tabs {
+  width: 500px;
+  margin: 30px auto;
+}
+
+.tabs .menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs .menu li {
+  cursor: pointer;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 120%;
+}
+
+.tabs section {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.tabs nav .activo, .tabs nav li:hover {
+  background-color: gray;
+  ;
+}

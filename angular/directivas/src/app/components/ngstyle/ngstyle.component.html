@@ -1,10 +1,23 @@
+<input type="range" min="10" max="30" step="1" (input)="cambiarFuente($event)">
 <p [ngStyle]="{'color': color, 'font-size': fontSize}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo
   veritatis ea iure hic eligendi
   corporis impedit
   quisquam molestias, porro placeat, ipsam libero inventore deserunt natus distinctio alias aspernatur! Nulla.</p>
+<hr>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo veritatis ea iure hic eligendi corporis impedit
+<input type="number" [(ngModel)]="borderWidth">
+<select [(ngModel)]="borderColor">
+  <option value="" selected>Selecciona un color</option>
+  <option value="blue">Azul</option>
+  <option value="green">Verde</option>
+  <option value="violet">Morado</option>
+</select>
+<button (click)="cambiarEstilo()">Cambiar borde</button>
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo veritatis ea iure hic
+  eligendi corporis impedit
   quisquam molestias, porro placeat, ipsam libero inventore deserunt natus distinctio alias aspernatur! Nulla.</p>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo veritatis ea iure hic eligendi corporis impedit
+<p [ngStyle]="{'background-color': bgColor}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quo veritatis
+  ea iure hic eligendi
+  corporis impedit
   quisquam molestias, porro placeat, ipsam libero inventore deserunt natus distinctio alias aspernatur! Nulla.</p>
