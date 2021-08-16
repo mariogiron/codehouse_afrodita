@@ -22,4 +22,9 @@ export class AppComponent {
     )
   }
 
+  onAficionCreada($event: any) {
+    this.listaAficiones.push($event);
+    //console.log(this.listaAficiones);
+  }
+
 }

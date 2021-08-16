@@ -9,3 +9,9 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.aficion {
+  background-color: lightcoral;
+  padding: 15px;
+  margin: 10px 0px;
+}

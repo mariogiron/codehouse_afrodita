@@ -1,6 +1,6 @@
 <section>
   <div>
-    <app-form></app-form>
+    <app-form (aficionCreada)="onAficionCreada($event)"></app-form>
   </div>
   <div>
     <app-lista-aficiones [aficiones]="listaAficiones"></app-lista-aficiones>
