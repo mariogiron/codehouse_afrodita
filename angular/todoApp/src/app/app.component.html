@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="row">
+    <div class="col-6">
+      <!-- form -->
+      <app-form (tareaEnviada)="onTareaGuardar($event)"></app-form>
+    </div>
+    <div class="col-6">
+      <!-- filtros -->
+      <app-filtros (prioridadEnviada)="onFiltrarPrioridad($event)"></app-filtros>
+    </div>
+  </header>
+  <main>
+    <!-- lista tareas -->
+    <app-lista-tareas [tareas]="arrTareas" [prioridad]="prioridad" (tareaBorrar)="onDeleteTarea($event)">
+    </app-lista-tareas>
+  </main>
+</div>
