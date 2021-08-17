@@ -1,0 +1,22 @@
+<div class="notificaciones" [ngSwitch]="numProductos">
+  <p class="alert" *ngSwitchCase="1">Tienes un unico producto</p>
+  <p class="warning" *ngSwitchCase="5">Tienes 5 productos o menos</p>
+  <p class="success" *ngSwitchDefault>Tienes suficiente producto</p>
+</div>
+
+<hr>
+
+<div class="notificaciones">
+  <p class="alert" *ngIf="numProductos <= 1">Tienes un unico producto</p>
+  <p class="warning" *ngIf="numProductos > 1 && numProductos <= 5">Tienes 5 productos o menos</p>
+  <p class="success" *ngIf>Tienes suficiente producto</p>
+</div>
+
+<hr>
+
+<ul class="departamentos">
+  <li [ngStyle]="{'display': (trabajador.departamento === departamento) ? 'block': 'none'}"
+    *ngFor="let trabajador of arrTrabajadores">
+    {{trabajador.nombre}} - {{trabajador.departamento}}
+  </li>
+</ul>

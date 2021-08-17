@@ -2,11 +2,17 @@
 <section class="episodios">
   <h2>Episiodios primer temporada</h2>
 
-  <article *ngFor="let episodio of episodios; let i=index;">
-    <h3>{{i+1}} - {{episodio.title}}</h3>
+  <article [ngClass]="{'impar': impar, 'par':  par, 'primero': primero, 'ultimo':
+ultimo}"
+    *ngFor="let episodio of episodios; let i=index; let par = even; let impar = odd; let primero = first; let ultimo = last">
+    <h3>{{i}} - {{episodio.title}}</h3>
     <p>Director: {{episodio.director}}</p>
+    <p>PAR: {{par}}</p>
+    <p>IMPAR: {{impar}}</p>
+    <p> PRIMERO: {{ primero}}</p>
+    <p> ULTIMO: {{ ultimo}}</p>
     <hr>
   </article>
-<!-- quiero que pinteis cada capitulo de un color de fondo alterno.-->
+  <!-- quiero que pinteis cada capitulo de un color de fondo alterno.-->
 
 </section>

@@ -1,0 +1,9 @@
+<button (click)="onClickBoton()">{{ textoBoton }}</button>
+<div *ngIf="estado; else elseBlock">
+  Este contenido solo se ve si estado es igual a true
+</div>
+<ng-template #elseBlock>
+  <div>
+    Este contenido solo se visualiza si estado es igual a FALSE
+  </div>
+</ng-template>

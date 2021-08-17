@@ -1,0 +1,17 @@
+.par {
+  background-color: tomato;
+  padding: 10px;
+}
+
+.impar {
+  background-color: beige;
+  padding: 10px;
+}
+
+.primero {
+  border: 2px solid black;
+}
+
+.ultimo {
+  border: 3px solid green;
+}
