@@ -10,6 +10,7 @@ export class AppComponent {
 
   arrTareas: Tarea[];
   prioridad: string;
+  busqueda: string;
 
   constructor() {
     this.arrTareas = [
@@ -30,6 +31,7 @@ export class AppComponent {
       }
     ]
     this.prioridad = "";
+    this.busqueda = "";
   }
 
   onDeleteTarea($event: number) {
@@ -42,5 +44,9 @@ export class AppComponent {
 
   onFiltrarPrioridad($event: string) {
     this.prioridad = $event;
+  }
+
+  onBusqueda($event: string) {
+    this.busqueda = $event;
   }
 }

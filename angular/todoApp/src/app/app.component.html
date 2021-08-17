@@ -6,12 +6,14 @@
     </div>
     <div class="col-6">
       <!-- filtros -->
-      <app-filtros (prioridadEnviada)="onFiltrarPrioridad($event)"></app-filtros>
+      <app-filtros (prioridadEnviada)="onFiltrarPrioridad($event)" (busquedaEnviada)="onBusqueda($event)">
+      </app-filtros>
     </div>
   </header>
   <main>
     <!-- lista tareas -->
-    <app-lista-tareas [tareas]="arrTareas" [prioridad]="prioridad" (tareaBorrar)="onDeleteTarea($event)">
+    <app-lista-tareas [tareas]="arrTareas" [prioridad]="prioridad" [busqueda]="busqueda"
+      (tareaBorrar)="onDeleteTarea($event)">
     </app-lista-tareas>
   </main>
 </div>

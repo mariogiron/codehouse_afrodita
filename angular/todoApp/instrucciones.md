@@ -19,5 +19,12 @@
 
 7 - eliminar la tarea: tenemos que comunicar al padre que tarea queremos que se elimina - Output - capturamos el evento de click del boton de borrar y el id de la tarea que queremos borrar.
 
+8 - agregar tarea desde componente hijo.
+
+9 - filtrar tarea por prioridad.
+
+10 - buscador semantico.
+
+11 - si cualquier filtro no me me muestrar ningun valor o mi array esta vacio, por que el borrado todas las tareas, me tiene que pintar un article gris que ponga no hay tareas.
 
 

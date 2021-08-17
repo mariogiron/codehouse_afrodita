@@ -1,11 +1,18 @@
 <hr>
-<section>
+<section *ngIf="tareasPintadas.length !== 0">
 
   <article class="p-3 d-flex justify-content-between mb-2"
     [ngClass]="{ 'bg-primary': tarea.priority === 'diaria', 'bg-danger': tarea.priority === 'urgente', 'bg-success' : tarea.priority === 'mensual'}"
     *ngFor="let tarea of tareasPintadas">
     <h3>{{tarea.title}} - <span>{{tarea.priority}}</span></h3>
     <button (click)="borrarTarea(tarea.id)" class="btn"><i class="fas fa-trash-alt"></i></button>
+  </article>
+
+</section>
+<section *ngIf="tareasPintadas.length == 0">
+
+  <article class="bg-secondary p-3 d-flex justify-content-between mb-2">
+    <h3>No hay tareas</h3>
   </article>
 
 </section>

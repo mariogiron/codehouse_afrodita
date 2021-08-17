@@ -10,6 +10,7 @@ export class ListaTareasComponent implements OnInit {
 
   @Input() tareas: Tarea[];
   @Input() prioridad: string;
+  @Input() busqueda: string;
   @Output() tareaBorrar: EventEmitter<number>
   tareasPintadas: Tarea[];
 
@@ -18,6 +19,7 @@ export class ListaTareasComponent implements OnInit {
     this.tareaBorrar = new EventEmitter();
     this.prioridad = "";
     this.tareasPintadas = [];
+    this.busqueda = "";
   }
 
   ngOnInit(): void {
@@ -26,10 +28,12 @@ export class ListaTareasComponent implements OnInit {
   ngOnChanges(): void {
 
     if (this.prioridad !== "") {
-      this.tareasPintadas = [...this.tareas].filter(tarea => tarea.priority === this.prioridad);
+      this.tareasPintadas = this.tareas.filter(tarea => tarea.priority === this.prioridad);
+    } else if (this.busqueda !== "") {
+      this.tareasPintadas = this.tareas.filter(tarea => tarea.title.toLowerCase().includes(this.busqueda.toLowerCase()));
     }
     else {
-      this.tareasPintadas = [...this.tareas];
+      this.tareasPintadas = this.tareas;
     }
 
   }
