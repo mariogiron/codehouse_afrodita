@@ -1,0 +1,60 @@
+<p>control nombre valido: {{ formulario.get('nombre')?.errors | json}}</p>
+
+<div class="container">
+  <h2>Form tipo Model</h2>
+  <form novalidate [formGroup]="formulario" (ngSubmit)="recogerDatos()">
+
+    <div class="my-2">
+      <label>Nombre (*)</label>
+      <input type="text" class="form-control" formControlName="nombre">
+      <p *ngIf="checkControl('nombre' , 'required')" class="error">El campo
+        es requerido</p>
+
+      <p *ngIf="checkControl('nombre' , 'minlength')" class="error">La
+        longitud minima de campo es de 3 caracteres</p>
+    </div>
+
+    <div class="my-2">
+      <label>Apellidos</label>
+      <input type="text" class="form-control" formControlName="apellidos">
+      <p *ngIf="checkControl('apellidos' , 'required')" class="error">El campo es requerido</p>
+      <p *ngIf="checkControl('apellidos' , 'minlength')" class="error">El campo tiene una longitud minima de 15</p>
+    </div>
+
+    <div class="my-2">
+      <label>Edad</label>
+      <input type="number" class="form-control" formControlName="edad">
+      <p *ngIf="checkControl('edad' , 'edadValidator')" class="error">El campo edad debe estar entre 18 y 65 años</p>
+    </div>
+
+
+    <div class="my-2">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email">
+      <p *ngIf="checkControl('email' , 'required')" class="error">El campo es requerido</p>
+      <p *ngIf="checkControl('email' , 'pattern')" class="error">Tiene que ser un email valido</p>
+    </div>
+
+    <div class="my-2">
+      <label>DNI</label>
+      <input type="text" class="form-control" formControlName="dni">
+    </div>
+
+
+    <div class="my-2">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password">
+      <p *ngIf="checkControl('password' , 'minlength')" class="error">La longitud debe ser minimo de 8 </p>
+    </div>
+
+    <div class="my-2">
+      <label>Repite Password</label>
+      <input type="password" class="form-control" formControlName="repite_password">
+    </div>
+
+    <p class="error" *ngIf="formulario.hasError('passwordValidator')">No coinciden inutil</p>
+
+
+    <input type="submit" value="Enviar" class="btn btn-outline-primary" [disabled]="!formulario.valid">
+  </form>
+</div>
