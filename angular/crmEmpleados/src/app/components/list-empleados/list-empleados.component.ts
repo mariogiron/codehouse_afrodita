@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Empleado } from 'src/app/interfaces/empleado.interface';
 
 @Component({
   selector: 'app-list-empleados',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListEmpleadosComponent implements OnInit {
 
-  constructor() { }
+  @Input() empleados: Empleado[];
 
-  ngOnInit(): void {
+  constructor() {
+    this.empleados = [];
   }
+
+  ngOnInit(): void { }
+
+
+  ngDoCheck(): void {
+    //doCheck me sirve para chequear cualquier cambio en la estructura de datos esta permanentemente comprobando que el array  se modifica y me lanza los cambios.
+    
+    //console.log(this.empleados)
+  }
+
 
 }

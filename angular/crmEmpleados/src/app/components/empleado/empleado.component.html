@@ -1,1 +1,16 @@
-<p>empleado works!</p>
+<div class="card" [ngClass]="{'activo': empleado.status, 'inactivo': !empleado.status}">
+  <img [src]="empleado.photo" class="card-img-top" [alt]="empleado.name">
+  <div class="card-body">
+    <h3 class="card-title">{{empleado.name}}</h3>
+    <h5>{{empleado.surname}}</h5>
+    <div class="card-text">
+      <ul>
+        <li>DNI: {{empleado.dni}}</li>
+        <li>Email: {{empleado.email}}</li>
+        <li>Departamento: {{empleado.department}}</li>
+      </ul>
+    </div>
+    <button (click)="cambiarEstado(empleado)" class="btn" [ngClass]="{'btn-danger': empleado.status, 'btn-success': !empleado.status}"
+      [innerHTML]=" (empleado.status)?'Desactivar' : 'Activar' "></button>
+  </div>
+</div>

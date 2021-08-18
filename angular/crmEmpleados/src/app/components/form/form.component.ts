@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Empleado } from 'src/app/interfaces/empleado.interface';
 
 @Component({
   selector: 'app-form',
@@ -7,13 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  @Output() empleadoEnviado: EventEmitter<Empleado>
+
+  constructor() {
+    this.empleadoEnviado = new EventEmitter();
+  }
 
   ngOnInit(): void {
   }
 
-  getDataForm(pForm: any)
-  {
-    
+  getDataForm(pForm: any) {
+    pForm.value.status = true;
+    this.empleadoEnviado.emit(pForm.value);
+    pForm.resetForm({});
   }
 }

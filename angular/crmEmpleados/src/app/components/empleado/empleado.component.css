@@ -1,0 +1,13 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 80%;
+}
+
+.activo {
+  border: 4px solid lightgreen;
+}
+
+.inactivo {
+  border: 4px solid lightsalmon;
+}

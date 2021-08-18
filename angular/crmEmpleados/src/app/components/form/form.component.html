@@ -3,28 +3,29 @@
   <form action="" #formEmpleados="ngForm" (ngSubmit)="getDataForm(formEmpleados)">
     <div class="mb-3 form-group">
       <label for="name">Nombre</label>
-      <input class="form-control" type="text" id="name" name="name">
+      <input class="form-control" type="text" id="name" name="name" ngModel>
     </div>
     <div class="mb-3 form-group">
       <label for="surname">Apellidos</label>
-      <input class="form-control" type="text" id="surname" name="surname">
+      <input class="form-control" type="text" id="surname" name="surname" ngModel>
     </div>
     <div class="mb-3 form-group">
       <label for="dni">DNI</label>
-      <input class="form-control" type="text" id="dni" name="dni">
+      <input class="form-control" type="text" id="dni" name="dni" ngModel>
     </div>
     <div class="mb-3 form-group">
       <label for="email">Email</label>
-      <input class="form-control" type="text" id="email" name="email">
+      <input class="form-control" type="text" id="email" name="email" ngModel>
     </div>
 
     <div class="mb-3 form-group">
       <label for="photo">Foto</label>
-      <input class="form-control" type="text" id="photo" name="photo" placeholder="http://www.example.es/photo.jpg">
+      <input class="form-control" type="text" id="photo" name="photo" placeholder="http://www.example.es/photo.jpg"
+        ngModel>
     </div>
 
     <div class="mb-3 form-group">
-      <select name="department" class="form-control">
+      <select name="department" class="form-control" ngModel>
         <option value="" selected>Selecciona un departamento</option>
         <option value="contabilidad">Contabilidad</option>
         <option value="marketing">Marketing</option>

@@ -1,10 +1,10 @@
 <main class="container">
   <div class="row">
-    <div class="col-12 col-md-6">
-      <app-form></app-form>
+    <div class="col-12 col-lg-4">
+      <app-form (empleadoEnviado)="onEmpleadoEnviado($event)"></app-form>
     </div>
-    <div class="col-12 col-md-6">
-      <app-list-empleados></app-list-empleados>
+    <div class="col-12 col-lg-8">
+      <app-list-empleados [empleados]="arrEmpleados"></app-list-empleados>
     </div>
   </div>
 </main>

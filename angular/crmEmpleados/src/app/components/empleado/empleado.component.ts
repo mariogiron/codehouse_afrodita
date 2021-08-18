@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Empleado } from 'src/app/interfaces/empleado.interface';
 
 @Component({
   selector: 'app-empleado',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit {
 
-  constructor() { }
+  @Input() empleado: Empleado;
+
+  constructor() {
+    this.empleado = {
+      name: "",
+      surname: "",
+      dni: "",
+      email: "",
+      photo: "",
+      department: "",
+      status: true
+    }
+  }
 
   ngOnInit(): void {
+  }
+
+  cambiarEstado(pEmpleado: Empleado) {
+    pEmpleado.status = !pEmpleado.status;
   }
 
 }

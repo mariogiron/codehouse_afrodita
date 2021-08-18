@@ -1,1 +1,9 @@
-<p>list-empleados works!</p>
+<h2 class="my-3">Lista de Empleados</h2>
+<section class="row g-4">
+
+  <article class="col-12 col-sm-6 col-md-4" *ngFor="let empleado of empleados">
+    <app-empleado [empleado]="empleado"></app-empleado>
+  </article>
+
+
+</section>
