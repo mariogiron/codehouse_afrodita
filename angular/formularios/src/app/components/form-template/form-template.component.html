@@ -1,15 +1,47 @@
 <div class="container mt-5">
   <h1>Template</h1>
-  <form action="" #formulario="ngForm" (ngSubmit)="recogerDatos(formulario.value)">
+  <form action="" #formulario="ngForm" (ngSubmit)="recogerDatos(formulario)">
     <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input id="nombre" type="text" class="form-control" placeholder="introduce tu nombre" ngModel name="nombre">
+      <input id="nombre" type="text" class="form-control" placeholder="introduce tu nombre" ngModel name="name">
     </div>
 
     <div class="form-group">
       <label for="apellidos">Apellidos</label>
-      <input id="apellidos" type="text" class="form-control" placeholder="introduce tu nombre" ngModel name="apellidos">
+      <input id="apellidos" type="text" class="form-control" placeholder="introduce tu nombre" ngModel name="surname">
     </div>
+
+    <div class="form-group">
+      <label for="direccion">Direccion</label>
+      <input id="direccion" type="text" class="form-control" placeholder="introduce tu dirección" ngModel
+        name="address">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="text" class="form-control" placeholder="introduce tu email" ngModel name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="edad">Edad</label>
+      <input id="edad" type="number" min="0" class="form-control" placeholder="introduce tu edad" ngModel name="age">
+    </div>
+
+
     <input type="submit" class="btn btn-info mt-2" value="Enviar">
   </form>
 </div>
+<hr>
+<section class="users container">
+  <div class="row">
+    <article class="col-12 col-md-3" *ngFor="let user of arrUsers">
+      <h3>{{user.name}} {{user.surname}}</h3>
+      <ul>
+        <li>EDAD: {{user.age}} </li>
+        <li>EMAIL: {{user.email}} </li>
+        <li>DIRECCION: {{user.address}} </li>
+      </ul>
+    </article>
+  </div>
+
+</section>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/interfaces/user.interface';
 
 @Component({
   selector: 'app-form-template',
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormTemplateComponent implements OnInit {
 
-  constructor() { }
+  arrUsers: User[];
+
+  constructor() {
+    this.arrUsers = [];
+  }
 
   ngOnInit(): void {
   }
 
-
   recogerDatos(pForm: any) {
-    console.log(pForm);
+    this.arrUsers.push(pForm.value)
+    pForm.resetForm({});
   }
 }
