@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>{{producto.nombre}}</h3>
+  <p>{{producto.descripcion}}</p>
+  <hr>
+  <ul class="d-flex info">
+    <li [routerLink]="['/producto', producto.id, 'especificaciones']">Especificaciones</li>
+    <li [routerLink]="['/producto',producto.id, 'relacionados']">Relacionados</li>
+  </ul>
+  <div class="border-2">
+    <router-outlet></router-outlet>
+  </div>
+</div>

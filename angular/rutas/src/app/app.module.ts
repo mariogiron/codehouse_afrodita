@@ -9,6 +9,9 @@ import { InfoComponent } from './components/info/info.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
+import { ProductoComponent } from './components/producto/producto.component';
+import { EspecificacionesComponent } from './components/producto/especificaciones/especificaciones.component';
+import { RelacionadosComponent } from './components/producto/relacionados/relacionados.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
     InfoComponent,
     ProjectsComponent,
     AboutComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ProductoComponent,
+    EspecificacionesComponent,
+    RelacionadosComponent
   ],
   imports: [
     BrowserModule,
