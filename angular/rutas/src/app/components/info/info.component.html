@@ -1,0 +1,19 @@
+<h1>Si quieres contactarme enviame tus datos</h1>
+<hr>
+<div class="mt-3">
+
+  <form novalidate #contacto="ngForm" (ngSubmit)="recogerDatos(contacto.value); contacto.reset();">
+    <div class="form-group my-2">
+      <label>Nombre</label>
+      <input type="text" class="form-control" name="nombre" ngModel placeholder="Introduce tu nombre">
+    </div>
+
+    <div class="form-group my-2">
+      <label>Telefono</label>
+      <input type="number" class="form-control" name="telefono" ngModel placeholder="Introduce tu telefono">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-info">
+
+  </form>
+
+</div>

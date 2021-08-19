@@ -1,0 +1,16 @@
+<h1>Home</h1>
+
+<section class="container">
+  <div class="row g-4">
+
+    <article class="col-12 col-md-4" *ngFor="let servicio of servicios">
+      <div class="card p-3">
+        <h3>{{servicio.nombre}}</h3>
+        <p>{{servicio.descripcion}}</p>
+        <a class="btn btn-primary" [routerLink]="['/servicios', servicio.url]">Leer más</a>
+      </div>
+    </article>
+
+
+  </div>
+</section>
