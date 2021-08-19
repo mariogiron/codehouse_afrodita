@@ -28,7 +28,9 @@ export class FormModelComponent implements OnInit {
         Validators.required,
         Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
       ]),
-      dni: new FormControl('', []),
+      dni: new FormControl('', [
+        this.dniValidator
+      ]),
       password: new FormControl('', [
         Validators.minLength(8)
       ]),
@@ -36,10 +38,31 @@ export class FormModelComponent implements OnInit {
     }, [this.passwordValidator])
 
   }
+
+  ngOnInit(): void {
+  }
+
   /*
    crear una funcion de validacion de DNI
   */
-  ngOnInit(): void {
+
+  dniValidator(control: AbstractControl) {
+
+    const dni = control.value;
+    const conjuntoLetras = "TRWAGMYFPDXBNJZSQVHLCKET";
+    const expDni = /^\d{8}[a-zA-Z]$/
+
+    if (expDni.test(dni)) {
+      const numero = dni.substr(0, dni.length - 1); //50742456
+      const letra = dni.substr(dni.length - 1, 1); //V
+      const calculo = numero % 23;
+
+      return (letra.toUpperCase() !== conjuntoLetras.split('')[calculo]) ? { dniValidator: 'La letra no corresponde al numero' } : null;
+
+    } else {
+      return { dniValidator: 'El formato es incorrecto' }
+    }
+
   }
 
   passwordValidator(form: AbstractControl) {

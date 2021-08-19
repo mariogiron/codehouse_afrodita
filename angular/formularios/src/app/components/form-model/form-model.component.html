@@ -38,6 +38,7 @@
     <div class="my-2">
       <label>DNI</label>
       <input type="text" class="form-control" formControlName="dni">
+      <p *ngIf="checkControl('dni' , 'dniValidator')" class="error">{{ formulario.get('dni')?.errors?.dniValidator}}</p>
     </div>
 
 
