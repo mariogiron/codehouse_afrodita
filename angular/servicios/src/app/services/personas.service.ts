@@ -6,7 +6,7 @@ import { Persona } from '../interfaces/persona.interface';
 })
 export class PersonasService {
 
-  arrPersonas: Persona[];
+  private arrPersonas: Persona[];
   constructor() {
     this.arrPersonas = [];
   }
@@ -15,4 +15,13 @@ export class PersonasService {
     this.arrPersonas.push(pPerson);
     console.log(this.arrPersonas);
   }
+
+  getAll(): Persona[] {
+    return this.arrPersonas;
+  }
+
+  getPeopleByAge(pFiltros: any): Persona[] {
+    return this.arrPersonas.filter(persona => persona.edad >= pFiltros.edadMin && persona.edad <= pFiltros.edadMax);
+  }
+
 }
