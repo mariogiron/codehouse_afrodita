@@ -1,0 +1,28 @@
+<section class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-md-3 bg-secondary">
+      <!-- filtros -->
+      <app-filtros (filtroRating)="onFiltroRaiting($event)" (filtroCanal)="onFiltroCanal($event)"
+        (busqueda)="onBusqueda($event)"></app-filtros>
+    </div>
+    <div class="col-12 col-md-9">
+      <!-- listaSeries -->
+      <div class="row g-4">
+        <article class="col-6 col-md-4" *ngFor="let serie of arrSeries">
+          <div class="card">
+            <img [src]=" serie.imagen " class="card-img-top" [alt]="serie.titulo">
+            <div class="card-body">
+              <h5 class="card-title">{{serie.titulo}}</h5>
+              <p>Creador: {{serie.creador}}</p>
+              <p>Puntuación: {{serie.rating}}</p>
+              <p>Canal: {{serie.canal}}</p>
+              <button class="btn btn-primary">Ir al detalle</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>

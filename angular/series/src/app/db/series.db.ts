@@ -1,4 +1,6 @@
-const SERIES: Serie[] = [
+import { Serie } from "../interfaces/serie.interface";
+
+export const SERIES: Serie[] = [
   { id: 1, titulo: 'Juego de Tronos', creador: 'David Benioff, D.B. Weiss', rating: 9.2, fechas: '2011-2019', imagen: 'https://es.web.img3.acsta.net/pictures/19/03/22/10/08/5883111.jpg', canal: 'HBO' },
   { id: 2, titulo: 'Breaking Bad', creador: 'Vince Gilligan', rating: 9.4, fechas: '2008-2013', imagen: 'https://es.web.img3.acsta.net/pictures/18/04/04/22/52/3191575.jpg', canal: 'AMC' },
   { id: 3, titulo: 'Stranger Things', creador: 'Matt Duffer, Ross Duffer', rating: 8.7, fechas: '2016-', imagen: 'https://es.web.img3.acsta.net/pictures/19/06/04/16/39/4888520.jpg', canal: 'Netflix' },

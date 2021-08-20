@@ -1,4 +1,6 @@
-const PERSONAJES: Personaje[] = [
+import { Personaje } from "../interfaces/personaje.interface";
+
+export const PERSONAJES: Personaje[] = [
   { id: 1, nombre_real: 'Emilia Clarke', nombre_personaje: 'Daenerys Targaryen', imagen: 'https://m.media-amazon.com/images/M/MV5BNjg3OTg4MDczMl5BMl5BanBnXkFtZTgwODc0NzUwNjE@._V1_UX214_CR0,0,214,317_AL_.jpg', episodios: 62, serie: 1 },
   { id: 2, nombre_real: 'Peter Dinklage', nombre_personaje: 'Tyrion Lannister', imagen: 'https://m.media-amazon.com/images/M/MV5BMTM1MTI5Mzc0MF5BMl5BanBnXkFtZTYwNzgzOTQz._V1_UY317_CR20,0,214,317_AL_.jpg', episodios: 67, serie: 1 },
   { id: 3, nombre_real: 'Kit Harington', nombre_personaje: 'Jon Snow', imagen: 'https://m.media-amazon.com/images/M/MV5BMTA2NTI0NjYxMTBeQTJeQWpwZ15BbWU3MDIxMjgyNzY@._V1_UX214_CR0,0,214,317_AL_.jpg', episodios: 62, serie: 1 },

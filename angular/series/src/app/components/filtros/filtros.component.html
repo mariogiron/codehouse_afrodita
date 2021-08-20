@@ -1,0 +1,22 @@
+<aside class="my-3">
+  <label>Busqueda por titulo</label><br>
+  <input type="text" class="form-control" placeholder="instroduce titulo a buscar"
+    (input)="recogerDatoBusqueda($event)">
+</aside>
+
+<aside class="my-3">
+  <label>Puntuacion mayor o igual a:</label><br>
+  <input type="number" min="0" max="10" [(ngModel)]="rating">
+  <button class="btn btn-primary mt-2" (click)="recogerRating()">Filtrar</button>
+</aside>
+
+
+<aside class="my-3">
+  <label>Filtro por canal:</label><br>
+  <select (change)="recogerCanal($event)">
+    <option value="todas">todas</option>
+    <option value="netflix">Netflix</option>
+    <option value="hbo">HBO</option>
+    <option value="appletv">Apple TV</option>
+  </select>
+</aside>
