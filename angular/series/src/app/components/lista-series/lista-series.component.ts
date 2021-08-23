@@ -22,13 +22,18 @@ export class ListaSeriesComponent implements OnInit {
   }
 
   onFiltroRaiting($event: any) {
-    console.log($event)
+    this.arrSeries = this.seriesService.getByRating($event);
   }
 
   onFiltroCanal($event: any) {
-    console.log($event)
+    if ($event !== 'todos') {
+      this.arrSeries = this.seriesService.getByChannel($event);
+    } else {
+      this.arrSeries = this.seriesService.getAll(); 
+    }
+
   }
   onBusqueda($event: any) {
-    console.log('busqueda', $event)
+    this.arrSeries = this.seriesService.getByTitle($event);
   }
 }

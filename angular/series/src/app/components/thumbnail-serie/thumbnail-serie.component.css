@@ -1,0 +1,18 @@
+.card {
+  box-shadow: 0px 0px 10px rgba(39, 39, 39, 0.50);
+  min-height: 620px;
+  display: flex;
+}
+
+.card button {
+  width: 100%;
+}
+
+.card .card-body {
+  flex-grow: 1;
+}
+
+.card .imagen {
+  height: 350px;
+  background-size: cover;
+}

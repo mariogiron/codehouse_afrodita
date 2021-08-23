@@ -33,7 +33,7 @@ Voy a cargar DetalleSeries
   4 - Desde listado de series poner un boton que nos permita navegar hasta al ruta de series por id, cada card tendra su boton y su id.
 
   5 - Crear componente temporadas, con texto plano y generar un par de botones que permitan navegar entre temporas y personajes dentro del detalle serie.
-  
+
 
 -------
 
@@ -55,3 +55,5 @@ Voy a cargar DetalleSeries
 
 
 //filtros
+
+

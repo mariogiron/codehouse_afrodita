@@ -1,0 +1,10 @@
+.filtros {
+  border-bottom: 1px solid #ccc;
+}
+
+@media(min-width: 768px) {
+  .filtros {
+    border-bottom: 0px;
+    border-right: 1px solid #ccc;
+  }
+}

@@ -1,11 +1,11 @@
 <section class="container mt-5">
   <div class="row">
-    <div class="col-12 col-md-3 bg-secondary">
+    <div class="col-12 col-md-3 p-3 filtros">
       <!-- filtros -->
       <app-filtros (filtroRating)="onFiltroRaiting($event)" (filtroCanal)="onFiltroCanal($event)"
         (busqueda)="onBusqueda($event)"></app-filtros>
     </div>
-    <div class="col-12 col-md-9">
+    <div class="col-12 col-md-9 p-3">
       <!-- listaSeries -->
       <div class="row g-4">
         <article class="col-6 col-md-4" *ngFor="let serie of arrSeries">

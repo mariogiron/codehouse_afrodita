@@ -1,5 +1,6 @@
 <div class="card">
-  <img [src]=" serie.imagen " class="card-img-top" [alt]="serie.titulo">
+  <!-- <img [src]=" serie.imagen " class="card-img-top" [alt]="serie.titulo"> -->
+  <div class="imagen" [ngStyle]="{backgroundImage: 'url(' + serie.imagen + ')'}"></div>
   <div class="card-body">
     <h5 class="card-title">{{serie.titulo}}</h5>
     <p>Creador: {{serie.creador}}</p>
