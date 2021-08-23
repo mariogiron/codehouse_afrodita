@@ -1,0 +1,13 @@
+<h3>Lista de personajes</h3>
+<div class="row g-3">
+  <div class="col-12 col-md-3" *ngFor="let personaje of arrPersonajes">
+    <figure>
+      <img class="img-fluid" [src]="personaje.imagen" [alt]="personaje.nombre_real">
+    </figure>
+    <h4>{{personaje.nombre_personaje}}</h4>
+    <ul>
+      <li>Actor: {{ personaje.nombre_real}}</li>
+      <li>Episodios: {{ personaje.episodios}}</li>
+    </ul>
+  </div>
+</div>

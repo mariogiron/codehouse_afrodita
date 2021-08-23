@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { ListaSeriesComponent } from './components/lista-series/lista-series.component';
 import { DetalleSeriesComponent } from './components/detalle-series/detalle-series.component';
 import { FiltrosComponent } from './components/filtros/filtros.component';
+import { ThumbnailSerieComponent } from './components/thumbnail-serie/thumbnail-serie.component';
+import { ListaPersonajesComponent } from './components/detalle-series/lista-personajes/lista-personajes.component';
+import { ListaTemporadasComponent } from './components/detalle-series/lista-temporadas/lista-temporadas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaSeriesComponent,
     DetalleSeriesComponent,
-    FiltrosComponent
+    FiltrosComponent,
+    ThumbnailSerieComponent,
+    ListaPersonajesComponent,
+    ListaTemporadasComponent
   ],
   imports: [
     BrowserModule,
