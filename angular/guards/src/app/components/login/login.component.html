@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div>
+  <h2>Login Usuario</h2>
+  <form #login="ngForm" (ngSubmit)="recogerDatosForm(login); login.reset()">
+    <div>
+      <label for="user">Usuario</label><br>
+      <input type="text" name="user" id="user" ngModel>
+    </div>
+    <div>
+      <label for="pass">Contraseña</label><br>
+      <input type="password" name="pass" id="pass" ngModel>
+    </div><br>
+    <input type="submit" value="Login">
+  </form>
+</div>

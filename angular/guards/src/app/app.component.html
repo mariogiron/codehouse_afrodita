@@ -1,7 +1,7 @@
 <header>
   <button [routerLink]="['/']" class="boton">Home</button>
-  <button [routerLink]="['/login']" class="boton">Login</button>
-  <button [routerLink]="['/profile']" class="boton">Perfil</button>
+  <button *ngIf="!login" [routerLink]="['/login']" class="boton">Login</button>
+  <button *ngIf="login" [routerLink]="['/profile']" class="boton">Perfil</button>
 </header>
 <hr>
 <router-outlet></router-outlet>

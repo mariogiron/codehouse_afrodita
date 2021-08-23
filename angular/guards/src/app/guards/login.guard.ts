@@ -7,7 +7,12 @@ import { CanActivate } from '@angular/router';
 })
 export class LoginGuard implements CanActivate {
   canActivate() {
-    return false;
-  }
+    console.log('paso por el guard');
+    if (localStorage.getItem('logado') !== 'ok') {
+      return false;
+    } else {
+      return true;
+    }
 
+  }
 }
