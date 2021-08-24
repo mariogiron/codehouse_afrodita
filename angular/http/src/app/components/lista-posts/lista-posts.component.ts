@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from 'src/app/interfaces/post.interface';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -10,9 +11,12 @@ import { PostsService } from 'src/app/services/posts.service';
 export class ListaPostsComponent implements OnInit {
 
   arrPost: Post[];
+  alertOk: boolean = false;
 
   constructor(
-    private postsService: PostsService
+    private postsService: PostsService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {
     this.arrPost = []
   }
@@ -27,6 +31,15 @@ export class ListaPostsComponent implements OnInit {
         console.log(error);
       })
 
+    //peticion para el queryParams
+    this.activatedRoute.queryParams.subscribe(queryParams => {
+      this.alertOk = (queryParams.insert === 'ok') ? true : false;
+    })
+
+  }
+
+  quitarAlert() {
+    this.router.navigate(['/home']);
   }
 
 }

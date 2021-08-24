@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post.interface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +24,13 @@ export class PostsService {
     return this.httpClient.get<Post>(this.baseUrl + pId).toPromise()
   }
 
+  create(pFormValue: any): Promise<Post> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json; charset=UTF-8',
+      }),
+    }
 
+    return this.httpClient.post<Post>(this.baseUrl, pFormValue, httpOptions).toPromise()
+  }
 }

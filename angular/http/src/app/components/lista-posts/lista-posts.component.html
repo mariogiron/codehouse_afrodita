@@ -1,5 +1,11 @@
 <section class="container">
   <h2>Listado de noticias</h2>
+
+  <div *ngIf="alertOk" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Post insertado correctamente</strong>
+    <button type="button" (click)="quitarAlert()" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
   <div class="row g-4">
     <article class="col-12 col-md-4" *ngFor="let post of arrPost">
       <div class="card">

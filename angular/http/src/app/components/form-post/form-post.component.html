@@ -1,0 +1,17 @@
+<section class="container">
+  <h2>Crear nuevo Post</h2>
+  <form [formGroup]="formPost" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label>Titulo</label>
+      <input type="text" class="form-control" formControlName="title">
+    </div>
+
+    <div class="mb-3">
+      <label>Cuerpo de texto</label>
+      <textarea class="form-control" formControlName="body" cols="30" rows="10"></textarea>
+    </div>
+
+    <input type="submit" value="Guardar Post" class="btn btn-success">
+  </form>
+
+</section>
