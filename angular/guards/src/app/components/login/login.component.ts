@@ -21,10 +21,10 @@ export class LoginComponent implements OnInit {
 
   recogerDatosForm(pForm: any) {
     const estadoLogin = this.usersService.checkUser(pForm.value);
-    if (estadoLogin !== 'ok') {
-      alert(estadoLogin);
+    if (estadoLogin.estado !== 'ok') {
+      alert(estadoLogin.estado);
     } else {
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/profile', estadoLogin.id]);
     }
   }
 

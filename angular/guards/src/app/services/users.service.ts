@@ -11,6 +11,7 @@ export class UsersService {
   constructor() {
     this.arrUser = [
       {
+        id: 1,
         name: "Juan Antonio",
         surname: "Pérez",
         age: 39,
@@ -19,6 +20,7 @@ export class UsersService {
         pass: "12345"
       },
       {
+        id: 2,
         name: "Mario",
         surname: "Girón",
         age: 37,
@@ -27,6 +29,7 @@ export class UsersService {
         pass: "23456"
       },
       {
+        id: 3,
         name: "Lucia",
         surname: "Lopez",
         age: 30,
@@ -37,16 +40,21 @@ export class UsersService {
     ]
   }
 
-  checkUser({ user, pass }: any): string {
+  checkUser({ user, pass }: any): any {
 
     const listaUser = this.arrUser.filter(usuario => usuario.user === user && usuario.pass === pass)
 
     if (listaUser.length !== 0) {
-      localStorage.setItem('logado', 'ok');
-      return 'ok';
+      localStorage.setItem('logado', String(listaUser[0].id));
+      return { estado: 'ok', id: listaUser[0].id };
     } else {
-      return 'Usuario no existe';
+      return { estado: 'Usuario no existe' };
     }
 
   }
+
+  getById(pId: number): User | undefined {
+    return this.arrUser.find(user => user.id === pId)
+  }
+
 }
