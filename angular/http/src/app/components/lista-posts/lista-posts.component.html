@@ -1,0 +1,14 @@
+<section class="container">
+  <h2>Listado de noticias</h2>
+  <div class="row g-4">
+    <article class="col-12 col-md-4" *ngFor="let post of arrPost">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ post?.title}}</h5>
+          <p class="card-text">{{ post?.body}}</p>
+          <a [routerLink]="['/post', post?.id]" class="btn btn-primary">Leer mas</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
