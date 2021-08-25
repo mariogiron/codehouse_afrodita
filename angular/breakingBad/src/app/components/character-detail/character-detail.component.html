@@ -1,0 +1,16 @@
+<section class="container">
+  <div class="row">
+    <figure class="col-12 col-md-3">
+      <img class="img-fluid" [src]="character?.img" [alt]="character?.nickname">
+    </figure>
+    <div class="col-12 col-md-9">
+      <h2>{{ character?.name}}</h2>
+      <ul class="list-group">
+        <li class="list-group-item">Ocupacion: {{character?.occupation}}</li>
+        <li class="list-group-item">Fecha Nacimiento: {{character?.birthday}}</li>
+        <li class="list-group-item">Acter: {{character?.portrayed}}</li>
+        <li class="list-group-item">Estado: {{character?.status}}</li>
+      </ul>
+    </div>
+  </div>
+</section>

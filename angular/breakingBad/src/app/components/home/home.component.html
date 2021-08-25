@@ -1,0 +1,7 @@
+<section class="container">
+  <div class="row">
+    <article class="col-12 col-md-6 col-lg-4" *ngFor="let character of arrCharacters">
+      <app-character-card [miCharacter]="character"></app-character-card>
+    </article>
+  </div>
+</section>
