@@ -1,10 +1,25 @@
 <section class="container">
   <h2>Listado de noticias</h2>
 
+  <!-- mirar si puedo simplicar el sistema de alertas con una sola alerta -->
   <div *ngIf="alertOk" class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>Post insertado correctamente</strong>
-    <button type="button" (click)="quitarAlert()" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <button type="button" (click)="quitarAlert('success')" class="btn-close" data-bs-dismiss="alert"
+      aria-label="Close"></button>
   </div>
+
+  <div *ngIf="alertDelete" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Post borrado correctamente</strong>
+    <button type="button" (click)="quitarAlert('delete')" class="btn-close" data-bs-dismiss="alert"
+      aria-label="Close"></button>
+  </div>
+
+  <div *ngIf="alertUpdate" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Post actualizado correctamente</strong>
+    <button type="button" (click)="quitarAlert('success')" class="btn-close" data-bs-dismiss="alert"
+      aria-label="Close"></button>
+  </div>
+
 
   <div class="row g-4">
     <article class="col-12 col-md-4" *ngFor="let post of arrPost">
@@ -12,7 +27,11 @@
         <div class="card-body">
           <h5 class="card-title">{{ post?.title}}</h5>
           <p class="card-text">{{ post?.body}}</p>
-          <a [routerLink]="['/post', post?.id]" class="btn btn-primary">Leer mas</a>
+          <div class="d-flex justify-content-between">
+            <a [routerLink]="['/post', post?.id]" class="btn btn-primary">Leer mas</a>
+            <a [routerLink]="['/update', post?.id]" class="btn btn-warning">Actualizar</a>
+            <a (click)="borrarPost(post?.id)" class="btn btn-danger">Borrar</a>
+          </div>
         </div>
       </div>
     </article>

@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: "home", component: ListaPostsComponent },
   { path: "post/:idpost", component: DetallePostComponent },
   { path: "newpost", component: FormPostComponent },
+  { path: "update/:idpost", component: FormPostComponent },
   { path: "**", redirectTo: "/" }
 ];
 

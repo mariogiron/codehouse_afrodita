@@ -12,6 +12,8 @@ export class ListaPostsComponent implements OnInit {
 
   arrPost: Post[];
   alertOk: boolean = false;
+  alertDelete: boolean = false;
+  alertUpdate: boolean = false;
 
   constructor(
     private postsService: PostsService,
@@ -33,13 +35,28 @@ export class ListaPostsComponent implements OnInit {
 
     //peticion para el queryParams
     this.activatedRoute.queryParams.subscribe(queryParams => {
-      this.alertOk = (queryParams.insert === 'ok') ? true : false;
+      this.alertOk = (queryParams.estado === 'ok' && queryParams.tipo === "insert") ? true : false;
+      this.alertUpdate = (queryParams.estado === 'ok' && queryParams.tipo === "update") ? true : false;
     })
 
   }
 
-  quitarAlert() {
-    this.router.navigate(['/home']);
+  quitarAlert(pAlert: string): void {
+    if (pAlert === "success") {
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 500);
+    } else if (pAlert === "delete") {
+      this.alertDelete = false;
+    }
+  }
+
+  async borrarPost(pId: number | undefined) {
+    //console.log(pId, typeof pId);
+    const mensaje = await this.postsService.delete(pId);
+    if (mensaje) {
+      this.alertDelete = true;
+    }
   }
 
 }

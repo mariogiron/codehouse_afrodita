@@ -1,17 +1,20 @@
 <section class="container">
-  <h2>Crear nuevo Post</h2>
+  <h2>{{title}} Post</h2>
   <form [formGroup]="formPost" (ngSubmit)="onSubmit()">
     <div class="mb-3">
       <label>Titulo</label>
       <input type="text" class="form-control" formControlName="title">
+      <p class="error" *ngIf="checkInput('title', 'required')">El campo es requirido</p>
+      <p class="error" *ngIf="checkInput('title', 'minlength')">El campo es tiene que tener minimo 20 caracteres</p>
     </div>
 
     <div class="mb-3">
       <label>Cuerpo de texto</label>
       <textarea class="form-control" formControlName="body" cols="30" rows="10"></textarea>
+      <p class="error" *ngIf="checkInput('body', 'required')">El campo es requirido</p>
     </div>
 
-    <input type="submit" value="Guardar Post" class="btn btn-success">
+    <input type="submit" [value]="title" class="btn btn-success" [disabled]="!formPost.valid">
   </form>
 
 </section>
