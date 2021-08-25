@@ -1,4 +1,14 @@
-<header>
-  <!-- filtros -->
+<header class="d-flex justify-content-between p-4 bg-dark mb-4">
+  <div class="d-flex">
+    <input type="text" class="form-control" placeholder="introduce un nombre" [(ngModel)]="search">
+    <button (click)="onClick()" class="btn btn-warning ms-3">Buscar</button>
+  </div>
+  <div>
+    <select class="form-select">
+      <option value="">Selecciona una categoria</option>
+      <option value="Better Call Saul">Better Call Saul</option>
+      <option value="Breaking Bad">Breaking Bad</option>
+    </select>
+  </div>
 </header>
 <router-outlet></router-outlet>

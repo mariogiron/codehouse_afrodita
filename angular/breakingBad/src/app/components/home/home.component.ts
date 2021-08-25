@@ -18,7 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<any> {
+    //debo discernir entre ruta activa y no ruta activa
+    //si no ruta activa cargo todos los persones
     this.arrCharacters = await this.charactersService.getAll();
+    //si hay ruta activa cargo la busqueda
   }
 
 
