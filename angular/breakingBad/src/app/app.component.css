@@ -1,0 +1,12 @@
+.logo {
+  width: 45px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

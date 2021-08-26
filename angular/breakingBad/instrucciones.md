@@ -14,6 +14,9 @@
 6 - buscador por nombre en el header
 7 - buscador por categoria (Ojo el selector de categorias debe llenarse del los datos de la api ¿que solución podeis aportar para que el selector tenga solo las categorias necesarias?).
 
+// --- //
 
+8 - Montar un paginacion, solo para la vista completa, no para busquedas. Quiero mostrar de 10 en 10 personas (61 personajes).
+ Pistas: la consulta getAll me devuelve el total de personajes, con eso puede calcular el numero de paginas por lo tanto el numero de botones, cada boton hará una consulta en el servicio paginando.
 
 

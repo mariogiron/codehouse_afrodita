@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,7 +15,17 @@ export class AppComponent {
 
   }
 
-  onClick() {
-    this.router.navigate(['/search', this.search])
+  onClick(): void {
+    this.router.navigate(['/search', this.search]);
+    this.search = "";
+  }
+
+  onSelect($event: any): void {
+    if ($event.target.value !== "") {
+      this.router.navigateByUrl('/home' + '\?category\=' + $event.target.value);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 }
+

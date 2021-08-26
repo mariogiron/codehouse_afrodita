@@ -20,4 +20,17 @@ export class CharactersService {
   getById(pId: number): Promise<Character[]> {
     return this.httpClient.get<Character[]>(this.baseUrl + pId).toPromise();
   }
+
+  getByName(pName: string): Promise<Character[]> {
+    return this.httpClient.get<Character[]>(this.baseUrl + '?name=' + pName).toPromise()
+  }
+
+  getByCategory(pCategory: string): Promise<Character[]> {
+    return this.httpClient.get<Character[]>(this.baseUrl + '?category=' + pCategory).toPromise();
+  }
+
+  getByPage(pPage: number = 1): Promise<Character[]> {
+    return this.httpClient.get<Character[]>(this.baseUrl + `?limit=10&offset=${(pPage - 1) * 10}`).toPromise();
+  }
+
 }

@@ -4,4 +4,14 @@
       <app-character-card [miCharacter]="character"></app-character-card>
     </article>
   </div>
+  <div class="row" *ngIf="mostrarPaginacion">
+    <nav>
+      <ul class="pagination pagination-sm">
+
+        <li *ngFor="let pag of pagination; let i = index" class="page-item" routerLinkActive="active"><a
+            class="page-link" [routerLink]="['/home', i+1]">{{i+1}}</a></li>
+
+      </ul>
+    </nav>
+  </div>
 </section>
