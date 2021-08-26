@@ -1,0 +1,46 @@
+<p>{{ numero | number:"3.2-5" }}</p>
+<p>{{ porcentaje | percent: '1.2-2' }}</p>
+<p>{{ precio | currency: 'EUR' }}</p>
+
+<p>{{ fechaActual | date: 'dd/MM/yy HH:mm.ss' }}</p> <!-- shortTime, longTime, fullDate-->
+<p>{{ miString | uppercase }}</p>
+<p>{{ miString | lowercase }}</p>
+<p>{{ miString.toLowerCase() }}</p>
+<p>{{ arrAlumnos | json }}</p>
+
+<h1>{{ miString | vuelta }}</h1>
+<h1>{{ "En lugar de la mancha" | vuelta }}</h1>
+
+
+<h1>{{ "ramiro no te creo" | capitalize }}</h1>
+
+
+<div>{{ texto | recortarString: 100}}</div>
+
+
+<div [innerHTML]="texto | recortarString: 50"></div>
+
+<input type="range" min="0" (input)="cambiarValor($event, 'inicio') " [max]="arrAnimales.length">
+<input type="range" min="0" (input)="cambiarValor($event, 'fin')" [max]="arrAnimales.length">
+<p>{{ arrAnimales | slice: inicio: fin }}</p>
+
+<p>{{miPromesa | async}}</p>
+<hr>
+<section>
+  <article *ngFor="let user of miPromesa | async">
+    <h3>{{user. name}}</h3>
+    <p>{{ user.phone}}</p>
+  </article>
+</section>
+
+
+<!-- quiero un pipe que le metamos un texto y me los saque en letra capitular.
+  en un lugar de la mancha -> En un lugar de la mancha
+-->
+
+
+<!-- quiero un pipe que le metamos un texto de cualquier longitud y me saque ese texto con solo 40 caracteres y puntos supensivos.
+
+  En un lugar de la mancha de cuyo nombre no puedo acordarme
+  En lugar de la mancha...
+-->
