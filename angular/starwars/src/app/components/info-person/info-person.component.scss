@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'grid';
+
+.personView{
+  border: 2px solid $blackColor;
+  padding: 20px;
+  height: auto;
+  h2{
+    margin: 20px 0;
+    text-decoration: underline;
+    font: {
+      size: $fontSize * 1.5;
+      weight: 700;
+    }
+  }
+  ul li{
+    margin: 5px 0;
+    span{
+      font-weight: 700;
+    }
+  }
+  nav .submenu{
+    display: flex;
+    justify-content: space-around;
+    li{
+      background-color: $blackColor;
+      color: $whiteColor;
+      padding: 10px 25px;
+      border: 1px solid $yellowColor;
+      cursor: pointer;
+      &:hover{
+        background-color: $yellowColor;
+        color: $blackColor;
+      }
+    }
+  }
+  aside .grid{
+    article{
+      background-color: $blackColor;
+      border: 2px solid $yellowColor;
+      color: $whiteColor;
+      padding: 20px;
+      h3{
+        color: $yellowColor;
+        font-weight: 700;
+      }
+    }
+  }
+
+}
+
+

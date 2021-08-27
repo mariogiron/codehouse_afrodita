@@ -1,0 +1,42 @@
+@use "sass:math";
+
+@mixin column($posicion){
+  $columWidth: 100% / 12 * $posicion;
+  width: calc( #{$columWidth} - #{$marginGrid * 2});
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class*='col-']{
+  margin: $marginGrid;
+}
+
+@for $i from 1 through 12
+{
+   /* movil */
+   .col-#{$i}{
+      @include column($i);
+   }
+}
+
+@media(min-width: $breakPointTablet){
+    @for $i from 1 through 12{
+      /* tablet */
+      .col-t-#{$i}{
+         @include column($i);
+      }
+    }
+}
+
+
+@media(min-width: $breakPointDesktop){
+    @for $i from 1 through 12{
+      /* tablet */
+      .col-d-#{$i}{
+         @include column($i);
+      }
+    }
+}

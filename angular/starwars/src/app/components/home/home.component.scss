@@ -1,0 +1,16 @@
+@import 'variables';
+
+.content{
+  border: 2px solid $blackColor;
+  padding: 20px;
+  height: calc(100vh - #{$marginGrid * 2} );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    font-size: $fontSize * 3;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,18 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body{
+  font-family: $fontFamily;
+  font-size: $fontSize;
+}
+
+ul{
+  list-style: none;
+}
