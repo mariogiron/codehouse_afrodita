@@ -1,0 +1,14 @@
+<div class="card mb-3 shadow">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [src]="contacto?.avatar" class="img-fluid rounded-start" [alt]="contacto?.first_name">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{contacto?.first_name}} {{contacto?.last_name}}</h5>
+        <small class="card-text">{{ contacto?.email }}</small>
+        <button class="btn btn-danger btn-sm" [routerLink]="['/contacto', contacto?.id]">Detalle contacto</button>
+      </div>
+    </div>
+  </div>
+</div>

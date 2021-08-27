@@ -1,0 +1,7 @@
+<section class="container mt-5">
+  <div class="row">
+    <article class="col-12 col-md-6 col-lg-4" *ngFor="let contacto of arrContactos">
+      <app-contacto-card [contacto]="contacto"></app-contacto-card>
+    </article>
+  </div>
+</section>
