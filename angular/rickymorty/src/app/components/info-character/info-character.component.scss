@@ -33,17 +33,9 @@
         color: $blackColor;
       }
     }
-  }
-  aside .grid{
-    article{
-      background-color: $blackColor;
-      border: 2px solid $yellowColor;
-      color: $whiteColor;
-      padding: 20px;
-      h3{
-        color: $yellowColor;
-        font-weight: 700;
-      }
+    .active{
+        background-color: $yellowColor;
+        color: $blackColor;
     }
   }
   .muerto{

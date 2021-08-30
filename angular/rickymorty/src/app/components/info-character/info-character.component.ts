@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Character } from 'src/app/interfaces/character.interface';
+import { CharactersService } from 'src/app/services/characters.service';
 
 @Component({
   selector: 'app-info-character',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoCharacterComponent implements OnInit {
 
-  constructor() { }
+  character: Character | undefined;
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private charactersService: CharactersService
+  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(async params => {
+
+      this.character = await this.charactersService.getById(Number(params.idcharacter))
+
+    })
   }
 
 }

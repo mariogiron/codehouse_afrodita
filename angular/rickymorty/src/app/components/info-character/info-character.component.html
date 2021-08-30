@@ -1,49 +1,25 @@
 <section class="personView">
-  <h2>Nombre del personaje</h2>
+  <h2>{{character?.name}}</h2>
   <div class="grid">
     <figure class="col-12 col-t-3">
-      <img
-        src="https://lh3.googleusercontent.com/proxy/RdlS8nSskRBZHqNPLGRUTEJ32TJbgis1PI55OnhGysL-vSAJktBEdl3grDldTzuZQRtItlyQj-uPIOvcQUHHjJiDCkYg3XYrjpicFO_BW1dodCRpy2k"
-        alt="imagen de muestra">
+      <img [src]="character?.image" [alt]="character?.name">
     </figure>
     <div class="col-12 col-t-9">
       <ul>
-        <li>Especie: <span>Humano</span> </li>
-        <li>Genero: <span>Masculino</span></li>
-        <li>Estado: <span class="muerto">Muerto</span></li>
+        <li>Especie: <span>{{character?.species}}</span> </li>
+        <li>Genero: <span>{{character?.gender}}</span></li>
+        <li>Estado: <span
+            [ngClass]="{'muerto':character?.status === 'Dead', 'vivo': character?.status === 'Alive', 'nosesabe': character?.status === 'unknown' }">{{character?.status}}</span>
+        </li>
       </ul>
     </div>
   </div>
   <hr>
   <nav>
     <ul class="submenu">
-      <li>Episodios</li>
-      <li>Localizaciones</li>
+      <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'episodes']">Episodios</li>
+      <li routerLinkActive="active" [routerLink]="['/character', character?.id, 'locations']">Localizaciones</li>
     </ul>
   </nav>
-  <aside>
-    <h2>Episodios</h2>
-    <div class="grid">
-
-      <!-- este es el article para episodios-->
-      <article class="col-12 col-t-6 col-d-3">
-        <h3>Titulo del episodio</h3>
-        <ul>
-          <li>Lanzamiento:</li>
-          <li>Codigo:</li>
-        </ul>
-      </article>
-
-
-      <!-- este es el article para localizaciones-->
-      <article class="col-12 col-t-6 col-d-3">
-        <h3>Titulo de la localizacion</h3>
-        <ul>
-          <li>Tipo:</li>
-          <li>Dimension:</li>
-        </ul>
-      </article>
-
-    </div>
-  </aside>
+  <router-outlet></router-outlet>
 </section>
