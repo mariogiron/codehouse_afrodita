@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'grid';
+ h2{
+     font: {
+       size: 200%;
+       weight: 700;
+     }
+}
+
+ aside .grid{
+
+  article{
+      background-color: $blackColor;
+      border: 2px solid $yellowColor;
+      color: $whiteColor;
+      padding: 20px;
+  }
+}

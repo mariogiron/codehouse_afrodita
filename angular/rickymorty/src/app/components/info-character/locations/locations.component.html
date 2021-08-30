@@ -3,12 +3,12 @@
   <div class="grid">
 
     <!-- este es el article para localizaciones-->
-    <article class="col-12 col-t-6 col-d-3">
-      <h3>Titulo de la localizacion</h3>
-      <ul>
-        <li>Tipo:</li>
-        <li>Dimension:</li>
-      </ul>
+    <article *ngIf="character?.location?.url !== ''" class="col-12 col-t-6 col-d-3">
+      <app-card-location [url]="character?.location?.url"></app-card-location>
+    </article>
+
+    <article *ngIf="character?.location?.url === ''" class="col-12 col-t-6 col-d-3">
+      <h3>Localizacion no definida</h3>
     </article>
 
   </div>

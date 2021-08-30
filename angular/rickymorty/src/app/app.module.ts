@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EpisodesComponent } from './components/info-character/episodes/episodes.component';
 import { LocationsComponent } from './components/info-character/locations/locations.component';
 import { CardEpisodeComponent } from './components/info-character/card-episode/card-episode.component';
+import { CardLocationComponent } from './components/info-character/card-location/card-location.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardEpisodeComponent } from './components/info-character/card-episode/c
     HomeComponent,
     EpisodesComponent,
     LocationsComponent,
-    CardEpisodeComponent
+    CardEpisodeComponent,
+    CardLocationComponent
   ],
   imports: [
     BrowserModule,

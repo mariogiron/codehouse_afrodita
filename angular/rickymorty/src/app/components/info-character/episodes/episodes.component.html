@@ -4,7 +4,7 @@
 
     <!-- este es el article para episodios-->
     <article class="col-12 col-t-6 col-d-3" *ngFor="let episode of arrEpisodes">
-      <app-card-episode></app-card-episode>
+      <app-card-episode [url]="episode"></app-card-episode>
     </article>
 
   </div>
