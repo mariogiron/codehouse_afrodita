@@ -4,22 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotonComponent } from './components/boton/boton.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIconModule } from '@angular/material/icon';
-
+import { MaterialModule } from './material.module';
+import { HeaderComponent } from './components/header/header.component';
+import { TablaComponent } from './components/tabla/tabla.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormComponent } from './components/form/form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BotonComponent
+    BotonComponent,
+    HeaderComponent,
+    TablaComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatIconModule
+    MaterialModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
