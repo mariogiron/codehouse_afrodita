@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="mt-5" *ngIf="!token">
+  <h1 class="text-center mt-5">Si quieres obtener tu premio deberas logarte con exito</h1>
+</div>
+<div class="mt-5" *ngIf="token">
+  <button class="btn btn-danger w-100 p-3" (click)="obtenerPremio()">Pasa y mira tu premio</button>
+</div>
+<div class="mt-5" *ngIf="url !== ''">
+  <img [src]="url">
+</div>

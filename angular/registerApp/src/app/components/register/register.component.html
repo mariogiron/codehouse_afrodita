@@ -1,39 +1,55 @@
-<form [formGroup]="registerForm" (ngSubmit)=onSubmit()>
+<form [formGroup]="registerForm" (ngSubmit)=onSubmit() class="mt-4">
   <div>
     <label for="name">Nombre</label>
     <input class="form-control" type="text" id="name" formControlName="name">
+    <p class="text-danger" *ngIf="checkControl('name', 'required')">Campo Requerido</p>
   </div>
   <div>
     <label for="surname">Apellidos</label>
     <input class="form-control" type="text" id="surname" formControlName="surname">
+    <p class="text-danger" *ngIf="checkControl('surname', 'required')">Campo Requerido</p>
   </div>
 
   <div>
     <label for="surname">Usuario</label>
     <input class="form-control" type="text" id="username" formControlName="username">
+    <p class="text-danger" *ngIf="checkControl('username', 'required')">Campo Requerido</p>
   </div>
 
   <div>
     <label for="mail">Email</label>
     <input class="form-control" type="text" id="mail" formControlName="mail">
+    <p class="text-danger" *ngIf="checkControl('mail', 'required')">Campo Requerido</p>
+    <p class="text-danger" *ngIf="checkControl('mail', 'pattern')">Campo tiene que ser un email valido</p>
   </div>
 
   <div>
-    <label for="age">Age</label>
+    <label for="age">Edad</label>
     <input class="form-control" type="text" id="age" formControlName="age">
+    <p class="text-danger" *ngIf="checkControl('age', 'required')">Campo Requerido</p>
   </div>
 
 
   <div>
     <label for="address">Direccion</label>
     <input class="form-control" type="text" id="address" formControlName="address">
+    <p class="text-danger" *ngIf="checkControl('address', 'required')">Campo Requerido</p>
   </div>
 
   <div>
     <label for="password">Password</label>
     <input class="form-control" type="password" id="password" formControlName="password">
+    <p class="text-danger" *ngIf="checkControl('password', 'required')">Campo Requerido</p>
   </div>
 
-  <input type="submit" value="Enviar">
+  <div>
+    <label for="password">Repite Pasword</label>
+    <input class="form-control" type="password" id="password" formControlName="repitepassword">
+  </div>
+
+
+  <p class="text-danger" *ngIf="registerForm.hasError('validadorPassword')">Los password no son iguales</p>
+
+  <input type="submit" class="btn btn-danger mt-4" value="Enviar" [disabled]="!registerForm.valid">
 
 </form>

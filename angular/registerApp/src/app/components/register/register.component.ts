@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-register',
@@ -8,17 +10,36 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
-  constructor() {
+
+  constructor(
+    private usersService: UsersService,
+    private router: Router
+  ) {
     this.registerForm = new FormGroup({
-      name: new FormControl('', []),
-      surname: new FormControl('', []),
-      username: new FormControl('', []),
-      mail: new FormControl('', []),
-      address: new FormControl('', []),
-      age: new FormControl('', []),
-      password: new FormControl('', []),
+      name: new FormControl('', [
+        Validators.required
+      ]),
+      surname: new FormControl('', [
+        Validators.required
+      ]),
+      username: new FormControl('', [
+        Validators.required
+      ]),
+      mail: new FormControl('', [
+        Validators.required,
+        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+      ]),
+      address: new FormControl('', [
+        Validators.required
+      ]),
+      age: new FormControl('', [
+        Validators.required
+      ]),
+      password: new FormControl('', [
+        Validators.required
+      ]),
       repitepassword: new FormControl('', []),
-    })
+    }, [this.validadorPassword])
 
   }
 
@@ -27,8 +48,32 @@ export class RegisterComponent implements OnInit {
 
   }
 
+  validadorPassword(form: AbstractControl) {
+    const valorPassword = form.get('password')?.value;
+    const repitePassword = form.get('repitepassword')?.value;
+    if (valorPassword === repitePassword) {
+      return null
+    } else {
+      return { validadorPassword: true }
+    }
+  }
 
-  onSubmit() {
-    console.log(this.registerForm.value);
+
+  async onSubmit() {
+    const message = await this.usersService.register(this.registerForm.value)
+    if (message.success) {
+      //redirigimos a login
+      this.router.navigate(['/login'])
+    } else {
+      alert(message.error);
+    }
+  }
+
+  checkControl(controlName: string, errorName: string): boolean {
+    if (this.registerForm.get(controlName)?.hasError(errorName) && this.registerForm.get(controlName)?.touched) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

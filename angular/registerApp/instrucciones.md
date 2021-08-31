@@ -1,11 +1,11 @@
 ## Registro App/Login
 
-  ruta del server  https://fbf6-88-3-9-108.ngrok.io
+  ruta del server  https://da1c-88-3-9-108.ngrok.io
 
-     POST https://fbf6-88-3-9-108.ngrok.io/register donde se registra el usuario en la bbdd.
-     POST https://fbf6-88-3-9-108.ngrok.io/login donde haremo peticion para obtener acceso
+     POST https://da1c-88-3-9-108.ngrok.io/register donde se registra el usuario en la bbdd.
+     POST https://da1c-88-3-9-108.ngrok.io/login donde haremo peticion para obtener acceso
       
-    GET https://fbf6-88-3-9-108.ngrok.io/premio para poder ver el premio necesitais el token del login.
+    GET https://da1c-88-3-9-108.ngrok.io/premio para poder ver el premio necesitais el token del login.
     headers user-token
 
   
